@@ -8,10 +8,7 @@ var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
 
 
-/* Skip initial */
-function skipInitial(){
-  $("#initial").css({display : "none"});
-}
+
 
 /* Orb */
 function bellIconClick(){
