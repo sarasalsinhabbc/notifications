@@ -1,0 +1,195 @@
+html, body, .pica{
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.info{
+	color: white;
+	font-family: 'Helvetica-Light';
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.cannon{
+	padding-top: 32px;
+	font-size: 28px;
+	line-height: 32px;
+}
+
+.trafalgar{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.doublePica{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.greatPrimer{
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.pica{
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.longPrimer{
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.brevier{
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.minion{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.title{
+	font-family: "GillSans";
+	font-size: 28px;
+
+}
+		.orb .info p:after {
+		content: "Under 240px...";
+	}
+
+/* Querys */
+
+@media only screen and (min-width: 240px){
+		.orb .info p:after {
+		content: "Grid Group 1 [0 – 399px] Margin: 8px Gutters: 8px | Type size Group A [feature phones]";
+	}
+}
+
+@media only screen and (min-width: 320px){
+
+		.orb .info p:after {
+		content: "Grid Group 1 [0 – 399px] Margin: 8px Gutters: 8px | Type size Group B [at 320px (default & smart phone)]";
+	}
+
+html, body, .pica{
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.cannon{
+	font-size: 32px;
+	line-height: 36px;
+}
+
+.trafalgar{
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.doublePica{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.greatPrimer{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.pica{
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.longPrimer{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.brevier{
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.minion{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+}
+
+@media only screen and (min-width: 400px){
+		.orb .info p:after {
+		content: "Grid Group 2 [400px – 599px] Margin: 16px Gutters: 8px |  Type size Group B [at 320px (default & smart phone)]";
+	}
+}
+
+@media only screen and (min-width: 600px){
+
+			.orb .info p:after {
+		content: "Grid Group 3 [600px – 1007px] Margin: 16px Gutters: 16px | Type size Group D [at 600px (typically desktop or laptop screens)]";
+	}
+
+html, body, .pica{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.cannon{
+	font-size: 40px;
+	line-height: 48px;
+}
+
+.trafalgar{
+	font-size: 32px;
+	line-height: 32px;
+}
+
+.doublePica{
+	font-size: 24px;
+	line-height: 24px;
+}
+
+.greatPrimer{
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.pica{
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.longPrimer{
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.brevier{
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.minion{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+}
+
+@media only screen and (min-width: 768px){
+			.orb .info p:after {
+		content: "Grid Group 3 [600px – 1007px] Margin: 16px Gutters: 16px |  Type size Group D [at 600px (typically desktop or laptop screens)]";
+	}
+}
+
+@media only screen and (min-width: 1008px){
+			.orb .info p:after {
+		content: "Grid Group 4 [1008px] Margin: 16px Gutters: 16px | Type size Group D [at 600px (typically desktop or laptop screens)]";
+	}
+
+}
