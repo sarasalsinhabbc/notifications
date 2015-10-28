@@ -183,7 +183,7 @@ function getFavourites() {
   }); 
 
 }
-subButton.addEventListener('click', getFavourites, false);
+
 
 
 /* Start */
