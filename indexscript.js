@@ -188,10 +188,7 @@ subButton.addEventListener('click', getFavourites, false);
 
 /* Start */
 function init(){
-  $("#includeOrb").load("orb/orb.html"); 
-  $("#bellIcon").click(bellIconClick);
-  $("#skipLink").click(skipInitial);
-  moveActions();
+
 }
 
 $(window).ready(init);
