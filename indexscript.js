@@ -22,7 +22,7 @@ function openActions(){
 
 /* Skip initial */
 function skipInitial(){
-  $("#initial").css({display : "none"});
+  $("#initial").css( 'display', 'none');
 }
 
 /* Orb */
@@ -203,15 +203,12 @@ function getFavourites() {
 
 /* Start */
 function init(){
-<<<<<<< HEAD
   $("#includeOrb").load("orb/orb.html"); 
   $("#bellIcon").click(bellIconClick);
   $("#skipLink").click(skipInitial);
   $(".more").click(openActions);
   moveActions();
-=======
-
->>>>>>> origin/gh-pages
+  skipInitial();
 }
 
 $(window).ready(init);
