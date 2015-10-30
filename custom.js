@@ -42,7 +42,7 @@
 			$('#tray').toggle(function () {
 				$(this).css('height', '600px');
 			});
-			
+
 		});
 
 		/*	-----------------------------------------------	* 
@@ -92,6 +92,19 @@
 		Element.prototype.hasClass = function(className) {
 			return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 		};
+
+
+		/*	-----------------------------------------------	* 
+			Open Actions
+		 *	-----------------------------------------------	*/
+
+		$('.moreActions').click(function() {
+		
+			$(this).toggleClass('moreActionsDesktop');
+		
+			$(this).parent().toggleClass('actionsOpen');
+
+		});
 
 		/*	-----------------------------------------------	* 
 			Initialisation
