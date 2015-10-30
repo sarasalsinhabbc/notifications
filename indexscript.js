@@ -21,10 +21,7 @@ function openActions(){
 };
 
 
-/* Skip initial */
-function skipInitial(){
-  $("#initial").css({display : "none"});
-}
+
 
 /* Orb */
 function bellIconClick(){
@@ -199,16 +196,20 @@ function getFavourites() {
   }); 
 
 }
-subButton.addEventListener('click', getFavourites, false);
+
 
 
 /* Start */
 function init(){
+<<<<<<< HEAD
   $("#includeOrb").load("orb/orb.html"); 
   $("#bellIcon").click(bellIconClick);
   $("#skipLink").click(skipInitial);
   $(".more").click(openActions);
   moveActions();
+=======
+
+>>>>>>> origin/gh-pages
 }
 
 $(window).ready(init);
