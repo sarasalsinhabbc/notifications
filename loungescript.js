@@ -1,13 +1,28 @@
 window.URL = window.URL || window.webkitURL;
 
+var uniquename;
 var current_state = 1;
+var action_state = 0;
 var subButton = document.getElementById('subButton');
 var dropdown = document.querySelectorAll('.bundleNotif');
 var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
 
+/* Actions */
+function openActions(){
+  if (current_state < 1) {
+      $(".moreActions").animate({right : "-90px"}, 500);
+    current_state = 1;
+  }else{
+    $(".moreActions").animate({right : "-90px"}, 500);
+      $(this).parent().animate({right : "0px"}, 500);
+    current_state = 0;
+  }
+};
+
+
 /* Orb */
-function pushFavourites(){
+function bellIconClick(){
 
 $.ajax({
     url: 'readFavourite1.php',
@@ -142,10 +157,17 @@ Element.prototype.hasClass = function(className) {
   return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
 
+
+
+
+
+
+
 /* Start */
 function init(){
   $("#includeOrb").load("orb/orb.html"); 
-  pushFavourites();
+  bellIconClick();
+  $(".more").click(openActions);
 }
 
 $(window).ready(init);

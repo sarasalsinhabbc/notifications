@@ -10,36 +10,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It's the BBC!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/text_D.css">
 </head>
 <body>
+
 
     <!--ORB-->
     <div id="bellIcon" class="orb"><div class="info"><p></p></div><div id="includeOrb"></div></div>
     <div class="separator"></div>
 
 
-    <!--Tray-->
     <div id="lounge">
 
-        <div class='wrapper'>
-            <div id="trayHeader">
-                <p class="title">NOTIFICATIONS</p>
+
+        <div id="loungeHeader">
+            <div class='wrapper'>
+                <p class="title">Notifications</p>
                 <div class="trayMenu">
-                    <div class="button"><img src="imgs/flag.svg"><p class="longPrimer">Flagged</p></div>
-                    <div class="button"><img src="imgs/settings.svg"><p class="longPrimer">Settings</p></div>
+                    <div class="button"><img src="imgs/flag_white.svg"><p class="longPrimer">Flagged</p></div>
+                    <div class="button"><img src="imgs/settings_white.svg"><p class="longPrimer">Settings</p></div>
                 </div>
             </div>
         </div>
 
-        <div class="separator"></div>
+        <div class='wrapper'>
 
-        <div id="notificationList">
-            <ul >
+            <div id="notificationList" class='wrapper'>
+                <ul >
 
-                    <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p></a></li>
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
 
-                    <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p></a></li>
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='iPlayer1Result' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
 
                     <li class="bundleNotif">
 
@@ -50,47 +60,156 @@
                             <i class="icon-arrow"></i></a></div>
                             <ul class="childrenNotif" id="firstDiv">
 
-                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+                                <li class="singleNotif">
+                                    <div class="moreActions">
+                                        <div class="more action"><img src="imgs/more.svg"></div>
+                                        <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                                        <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                                    </div>
 
-                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+                                    <div class="textNotif">
+                                        <img src="imgs/iplayer.svg"><p id='topicResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                                    </div>
+                                </li>
+                                <li class="singleNotif">
+                                    <div class="moreActions">
+                                        <div class="more action"><img src="imgs/more.svg"></div>
+                                        <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                                        <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                                    </div>
 
-                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+                                    <div class="textNotif">
+                                        <img src="imgs/iplayer.svg"><p id='topicResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                                    </div>
+                                </li>
+                                <li class="singleNotif">
+                                    <div class="moreActions">
+                                        <div class="more action"><img src="imgs/more.svg"></div>
+                                        <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                                        <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                                    </div>
 
-                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+                                    <div class="textNotif">
+                                        <img src="imgs/iplayer.svg"><p id='topicResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                                    </div>
+                                </li>
+                                <li class="singleNotif">
+                                    <div class="moreActions">
+                                        <div class="more action"><img src="imgs/more.svg"></div>
+                                        <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                                        <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                                    </div>
+
+                                    <div class="textNotif">
+                                        <img src="imgs/iplayer.svg"><p id='topicResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                                    </div>
+                                </li>
 
                                 <div id="sticky-anchor-stop"></div>
 
-                                <li class="singleNotif" id="lastDiv"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+                                
+
+                                <li class="singleNotif" id="lastDiv">
+                                    <div class="moreActions">
+                                        <div class="more action"><img src="imgs/more.svg"></div>
+                                        <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                                        <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                                    </div>
+
+                                    <div class="textNotif">
+                                        <img src="imgs/iplayer.svg"><p id='topicResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                                    </div>
+                                </li>
 
                             </ul>
                         </li>
 
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='iPlayer1Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='iPlayer2Result' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='iPlayer2Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='iPlayer3Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='iPlayer3Result' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/music.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='presenter1Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/music.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='presenter2Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='presenter1Result' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/travel.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='locationResult' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
 
-                        <li class="singleNotif"><a href="#"><img src="imgs/travel.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='topicResult' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='presenter2Result' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
+
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
+
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='locationResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
+
+                    <li class="singleNotif">
+                        <div class="moreActions">
+                            <div class="more action"><img src="imgs/more.svg"></div>
+                            <div class="flag action"><img src="imgs/flag_white.svg"><p class="longPrimer">Flag</p></div>
+                            <div class="remove action"><img src="imgs/remove_white.svg"><p class="longPrimer">Remove</p></div>
+                        </div>
+
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg"><p id='topicResult' class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p>
+                        </div>
+                    </li>
 
 
                     </ul>
-                    
+
                 </div>
 
             </div>      
 
+
+
+
         </div>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="loungescript.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="loungescript.js"></script>
 
-</body></html>
+    </body></html>

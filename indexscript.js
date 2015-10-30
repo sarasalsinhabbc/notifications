@@ -208,7 +208,7 @@ function init(){
   $("#skipLink").click(skipInitial);
   $(".more").click(openActions);
   moveActions();
-  skipInitial();
+
 }
 
 $(window).ready(init);
