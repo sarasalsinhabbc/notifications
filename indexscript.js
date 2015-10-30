@@ -193,8 +193,13 @@ function init(){
   $("#bellIcon").click(bellIconClick);
   $("#skipLink").click(skipInitial);
   $(".more").click(openActions);
+<<<<<<< HEAD
 
   $("#initial").css( 'display', 'none');
+=======
+  moveActions();
+
+>>>>>>> origin/gh-pages
 }
 
 $(window).ready(init);
