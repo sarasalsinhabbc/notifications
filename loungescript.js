@@ -1,33 +1,13 @@
 window.URL = window.URL || window.webkitURL;
 
-var uniquename;
 var current_state = 1;
-var action_state = 0;
 var subButton = document.getElementById('subButton');
 var dropdown = document.querySelectorAll('.bundleNotif');
 var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
 
-/* Actions */
-function openActions(){
-  if (current_state < 1) {
-      $(".moreActions").animate({right : "-90px"}, 500);
-    current_state = 1;
-  }else{
-    $(".moreActions").animate({right : "-90px"}, 500);
-      $(this).parent().animate({right : "0px"}, 500);
-    current_state = 0;
-  }
-};
-
-
-/* Skip initial */
-function skipInitial(){
-  $("#initial").css({display : "none"});
-}
-
 /* Orb */
-function bellIconClick(){
+function pushFavourites(){
 
 $.ajax({
     url: 'readFavourite1.php',
@@ -93,13 +73,6 @@ $("#topicResult").html(data + ' has been found in Mars!');
 });
 
 
-  if (current_state < 2) {
-    $("#tray").animate({height : "600px"}, 500);
-    current_state = 2;
-  }else{
-    $("#tray").animate({height : "0px"}, 500);
-    current_state = 1;
-  }
 }
 
 /* Bundle */
@@ -169,46 +142,10 @@ Element.prototype.hasClass = function(className) {
   return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
 
-
-
-/* DOESN'T WORK PROPERLY */
-function moveActions() {
-
-  $('.actionsTrigger').click(function() {
-
-    var parentTag = $( this ).parent().get( 0 ).tagName;
-    $(parentTag).css('position', 'relative');
-    $(parentTag).css('right', '153px');
-
-  });
-}
-
-
-/* Form */
-
-function getFavourites() {
-
-  $("#initial").css({display : "none"});
-
-  $.ajax({
-    url: 'writeFavourites.php',
-    type: 'post',
-    data: { result1: $("#iPlayerField1").val(), result2: $("#iPlayerField2").val(), result3: $("#iPlayerField3").val(), result4: $("#presenterField1").val(), result5: $("#presenterField2").val(), result6: $("#locationField").val(), result7: $("#topicField").val() },
-    success: function(data){
-    }
-  }); 
-
-}
-subButton.addEventListener('click', getFavourites, false);
-
-
 /* Start */
 function init(){
   $("#includeOrb").load("orb/orb.html"); 
-  $("#bellIcon").click(bellIconClick);
-  $("#skipLink").click(skipInitial);
-  $(".more").click(openActions);
-  moveActions();
+  pushFavourites();
 }
 
 $(window).ready(init);

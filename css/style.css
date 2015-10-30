@@ -144,24 +144,61 @@ html, body{
 }
 
 .singleNotif p{
-   width:70%;
-   display: inline-block;
+   display: table-row;
    padding-top: 3px;
+}
+
+.singleNotif{
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+}
+
+.textNotif{
+padding: 8px;
+width:70%;
+min-height: 56px;
+}
+
+.textNotif img{
+   width:24px;
+   height:24px;
+   margin-right: 8px;
+   float: left;
+}
+
+.action{
+  float: left;
+  padding: 8px 0px;
+  min-width: 44px;
+  min-height: 40px;
+  cursor: pointer;
+  border-right: 1px solid white;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:        border-box;
+}
+
+.action:last-child{
+   border-right: 0px solid white;
+}
+
+.action:first-child{
+   background-color: white;
+}
+
+.action img{
+   width:32px;
+   height:32px;
+   margin: 12px 6px;
+   display:inline;
+}
+
+.action p{
+   display:none;
 }
 
 .singleNotif .brevier{
   color: #333333;
-}
-
-.singleNotif{
-  min-height: 72px;
-  width: 100%;
-  padding: 8px;
-  border-style: solid;
-  border-bottom: 1px solid #cccccc;
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:        border-box;
 }
 
 .singleNotif a {
@@ -173,15 +210,14 @@ html, body{
   text-decoration: none;
 }
 
-.singleNotif:hover {
+.textNotif:hover {
   text-decoration: none;
   color: #007BC7;
-
+  cursor: pointer;
 }
 
 .singleNotif a:visited {
   text-decoration: none;
-
 }
 
 
@@ -208,9 +244,21 @@ html, body{
   display: block;
 }
 
+.moreActions {
+float:right;
+position: relative;
+right:-90px;
+    min-height: 40px;
+width: 134px;
+background-color: #007bc7;
+}
+
 .actions {
 float: right;
 display: inline-block;
+height: 100%;
+overflow: hidden;
+background-color: red;
 }
 
 .actions img{

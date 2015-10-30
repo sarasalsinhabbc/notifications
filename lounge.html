@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="imgs/icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's the BBC!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/text_D.css">
+</head>
+<body>
+
+    <!--ORB-->
+    <div id="bellIcon" class="orb"><div class="info"><p></p></div><div id="includeOrb"></div></div>
+    <div class="separator"></div>
+
+
+    <!--Tray-->
+    <div id="lounge">
+
+        <div class='wrapper'>
+            <div id="trayHeader">
+                <p class="title">NOTIFICATIONS</p>
+                <div class="trayMenu">
+                    <div class="button"><img src="imgs/flag.svg"><p class="longPrimer">Flagged</p></div>
+                    <div class="button"><img src="imgs/settings.svg"><p class="longPrimer">Settings</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div id="notificationList">
+            <ul >
+
+                    <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p></a></li>
+
+                    <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Product  |  time stamp</p></a></li>
+
+                    <li class="bundleNotif">
+
+                        <div class="bundleNotifTop">
+                          <a href="#" data-toggle="dropdown">
+                            <img src="imgs/iplayer.svg"><p class="longPrimer">This is a bundle. Check it out. <p class="brevier">Product  |  time stamp</p>
+
+                            <i class="icon-arrow"></i></a></div>
+                            <ul class="childrenNotif" id="firstDiv">
+
+                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+
+                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+
+                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+
+                                <li class="singleNotif"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+
+                                <div id="sticky-anchor-stop"></div>
+
+                                <li class="singleNotif" id="lastDiv"><a href="#"><div class="actions"><img src="imgs/more.svg"></div><p class="longPrimer">This is a notification. Check it out. <p class="brevier">Time stamp</p></a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='iPlayer1Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='iPlayer2Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/iplayer.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='iPlayer3Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/music.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='presenter1Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/music.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='presenter2Result' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/travel.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='locationResult' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+                        <li class="singleNotif"><a href="#"><img src="imgs/travel.svg"><div class="actions"><img src="imgs/more.svg"></div><p id='topicResult' class="longPrimer"><p class="brevier">Product  |  time stamp</p></a></li>
+
+
+                    </ul>
+                    
+                </div>
+
+            </div>      
+
+        </div>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="loungescript.js"></script>
+
+</body></html>
