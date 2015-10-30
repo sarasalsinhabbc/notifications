@@ -9,21 +9,19 @@ var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
 
 /* Actions */
-function openActions(){
-  if (current_state < 1) {
-      $(".moreActions").animate({right : "-90px"}, 500);
-    current_state = 1;
-  }else{
-    $(".moreActions").animate({right : "-90px"}, 500);
-      $(this).parent().animate({right : "0px"}, 500);
-    current_state = 0;
-  }
-};
 
-/* Skip initial */
-function skipInitial(){
-  $("#initial").css( 'display', 'none');
-}
+
+
+// function openActions(){
+//   if (current_state < 1) {
+//       $(".moreActions").animate({right : "-90px"}, 500);
+//     current_state = 1;
+//   }else{
+//     $(".moreActions").animate({right : "-90px"}, 500);
+//       $(this).parent().animate({right : "0px"}, 500);
+//     current_state = 0;
+//   }
+// };
 
 /* Orb */
 function bellIconClick(){
@@ -124,10 +122,10 @@ function sticky_relocate() {
   } else {
     $('.sticky').insertBefore('#firstDiv');
   }
-
 }
 
 dropdownArray.forEach(function(el){
+
   var button = el.querySelector('a[data-toggle="dropdown"]'),
   menu = el.querySelector('.childrenNotif'),
   bundleTop = el.querySelector('.bundleNotifTop'),
@@ -148,6 +146,7 @@ dropdownArray.forEach(function(el){
       $('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
     }
     else {
+      
       $('.sticky').insertBefore('#firstDiv');
       menu.classList.remove('show');
       menu.classList.add('hide');
@@ -161,27 +160,14 @@ dropdownArray.forEach(function(el){
       $("#notificationList").off("scroll", sticky_relocate);
       $('.clonedSticky').remove();
     }
+
   };
+
 });
 
 Element.prototype.hasClass = function(className) {
   return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
-
-
-
-/* DOESN'T WORK PROPERLY */
-function moveActions() {
-
-  $('.actionsTrigger').click(function() {
-
-    var parentTag = $( this ).parent().get( 0 ).tagName;
-    $(parentTag).css('position', 'relative');
-    $(parentTag).css('right', '153px');
-
-  });
-}
-
 
 /* Form */
 
@@ -207,8 +193,8 @@ function init(){
   $("#bellIcon").click(bellIconClick);
   $("#skipLink").click(skipInitial);
   $(".more").click(openActions);
-  moveActions();
-  skipInitial();
+
+  $("#initial").css( 'display', 'none');
 }
 
 $(window).ready(init);
