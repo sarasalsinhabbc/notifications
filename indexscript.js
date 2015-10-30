@@ -20,8 +20,10 @@ function openActions(){
   }
 };
 
-
-
+/* Skip initial */
+function skipInitial(){
+  $("#initial").css({display : "none"});
+}
 
 /* Orb */
 function bellIconClick(){
