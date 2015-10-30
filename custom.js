@@ -13,8 +13,8 @@
 		function sticky_relocate() {
 
 			var window_top = $('#notificationList').scrollTop();
-			var div_top = $('#sticky-anchor').offset.top;
-			var div_stop = $('#sticky-anchor-stop').offset.top;
+			var div_top = $('#sticky-anchor').offset().top;
+			var div_stop = $('#sticky-anchor-stop').offset().top;
 
 			if (window_top > div_top) {
 				$('.clonedSticky').addClass('stick');
@@ -42,17 +42,56 @@
 			$('#tray').toggle(function () {
 				$(this).css('height', '600px');
 			});
+			
 		});
 
 		/*	-----------------------------------------------	* 
 			Bundle Opening & Closing
 		 *	-----------------------------------------------	*/
 
-		$('.bundleNotif').click(function() {
-			
-			
+		var dropdown = document.querySelectorAll('.bundleNotif');
+		var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
+		dropdownArray.forEach(function(el){
+			var button = el.querySelector('a[data-toggle="dropdown"]'),
+			menu = el.querySelector('.childrenNotif'),
+			bundleTop = el.querySelector('.bundleNotifTop'),
+			bundleAnchor = el.querySelector('.childrenNotif li'),
+			arrow = button.querySelector('i.icon-arrow');
+
+			button.onclick = function(event) {
+				if(!menu.hasClass('show')) {
+					menu.classList.add('show');
+					menu.classList.remove('hide');
+					arrow.classList.add('open');
+					arrow.classList.remove('close');
+					event.preventDefault();
+					bundleTop.classList.add('sticky');
+					$("<div id='sticky-anchor'/>").insertBefore(bundleAnchor);
+					$("#notificationList").scroll(sticky_relocate);
+					sticky_relocate();
+					$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+				}
+				else {
+					$('.sticky').insertBefore('#firstDiv');
+					menu.classList.remove('show');
+					menu.classList.add('hide');
+					arrow.classList.remove('open');
+					arrow.classList.add('close');
+					event.preventDefault();
+					bundleTop.classList.remove('sticky');
+					bundleTop.classList.remove('stick');
+					bundleTop.classList.remove('stickStop');
+					$("#sticky-anchor").remove();
+					$("#notificationList").off("scroll", sticky_relocate);
+					$('.clonedSticky').remove();
+				}
+			};
 		});
+
+		Element.prototype.hasClass = function(className) {
+			return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+		};
 
 		/*	-----------------------------------------------	* 
 			Initialisation
