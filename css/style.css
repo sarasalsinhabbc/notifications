@@ -253,6 +253,16 @@ width: 134px;
 background-color: #007bc7;
 }
 
+.moreActionsDesktop {
+  right: 0 !important;
+}
+
+@media only screen and (orientation: portrait) {
+  .actionsOpen {
+    margin-left: -90px;
+  }
+}
+
 .actions {
 float: right;
 display: inline-block;
