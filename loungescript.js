@@ -11,11 +11,11 @@ var dropdownArray = Array.prototype.slice.call(dropdown,0);
 /* Actions */
 function openActions(){
   if (current_state < 1) {
-      $(".moreActions").animate({right : "-90px"}, 500);
+    $(".moreActions").animate({right : "-90px"}, 500);
     current_state = 1;
   }else{
     $(".moreActions").animate({right : "-90px"}, 500);
-      $(this).parent().animate({right : "0px"}, 500);
+    $(this).parent().animate({right : "0px"}, 500);
     current_state = 0;
   }
 };
@@ -24,68 +24,68 @@ function openActions(){
 /* Orb */
 function bellIconClick(){
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite1.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#iPlayer1Result").html(data + ' has a new episode!');
-}
-});
+      $("#iPlayer1Result").html(data + ' has a new episode!');
+    }
+  });
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite2.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#iPlayer2Result").html(data  + ' has a new episode!');
-}
-});
+      $("#iPlayer2Result").html(data  + ' has a new episode!');
+    }
+  });
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite3.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#iPlayer3Result").html(data  + ' has a new episode!');
-}
-});
+      $("#iPlayer3Result").html(data  + ' has a new episode!');
+    }
+  });
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite4.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#presenter1Result").html(data + ' added a new track!');
-}
-});
+      $("#presenter1Result").html(data + ' added a new track!');
+    }
+  });
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite5.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#presenter2Result").html(data + ' added a new track!');
-}
-});
+      $("#presenter2Result").html(data + ' added a new track!');
+    }
+  });
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite6.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#locationResult").html(data + ' has a severe incident! OMG!');
-}
-});
+      $("#locationResult").html(data + ' has a severe incident! OMG!');
+    }
+  });
 
-$.ajax({
+  $.ajax({
     url: 'readFavourite7.php',
     dataType: 'json',
     type:'post',
     success: function(data){
-$("#topicResult").html(data + ' has been found in Mars!');
-}
-});
+      $("#topicResult").html(data + ' has been found in Mars!');
+    }
+  });
 
 
 }
@@ -119,33 +119,35 @@ function sticky_relocate() {
 dropdownArray.forEach(function(el){
   var button = el.querySelector('a[data-toggle="dropdown"]'),
   menu = el.querySelector('.childrenNotif'),
-  bundleTop = el.querySelector('.bundleNotifTop'),
-  bundleAnchor = el.querySelector('.childrenNotif li'),
-  arrow = button.querySelector('i.icon-arrow');
+  bundleAnchor = el.querySelector('.childrenNotif li');
 
   button.onclick = function(event) {
     if(!menu.hasClass('show')) {
-      menu.classList.add('show');
-      menu.classList.remove('hide');
-      arrow.classList.add('open');
-      arrow.classList.remove('close');
+      $(".childrenNotif").addClass('show');
+      $('i.icon-arrow').addClass('open');
+      $('i.icon-arrow').removeClass('close');
+      $('.childrenNotif .singleNotif').removeClass('fadeOut');
+      $('.childrenNotif .singleNotif').addClass('fadeIn');
+      $(".childrenNotif").animate({maxHeight : "9999px"}, 500, easeInQuad);
       event.preventDefault();
-      bundleTop.classList.add('sticky');
+      $(".bundleNotifTop").addClass('sticky');
       $("<div id='sticky-anchor'/>").insertBefore(bundleAnchor);
       $("#notificationList").scroll(sticky_relocate);
       sticky_relocate();
       $('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
     }
     else {
+
+      $('.childrenNotif .singleNotif').removeClass('fadeIn');
+$('.childrenNotif .singleNotif').addClass('fadeOut');
+      $('.childrenNotif').animate({maxHeight : "0px"}, 500, easeOutQuad);
+
+      $('.childrenNotif').removeClass('show');
       $('.sticky').insertBefore('#firstDiv');
-      menu.classList.remove('show');
-      menu.classList.add('hide');
-      arrow.classList.remove('open');
-      arrow.classList.add('close');
+      $('i.icon-arrow').addClass('close');
+      $('i.icon-arrow').removeClass('open');
       event.preventDefault();
-      bundleTop.classList.remove('sticky');
-      bundleTop.classList.remove('stick');
-      bundleTop.classList.remove('stickStop');
+      $(".bundleNotifTop").removeClass('sticky stick stickStop');
       $("#sticky-anchor").remove();
       $("#notificationList").off("scroll", sticky_relocate);
       $('.clonedSticky').remove();
