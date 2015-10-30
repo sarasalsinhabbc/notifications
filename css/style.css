@@ -514,6 +514,7 @@ height: auto;
 .childrenNotif .singleNotif{
   border-bottom: 1px solid white;
   opacity: 0;
+  background-color: #e4e4e4;
 }
 
 
@@ -537,12 +538,38 @@ height: auto;
 
 #lounge .singleNotif{
 background-color: white;
+  border-bottom: 2px solid #cccccc;
 margin: 8px 0;
 }
 
+
+
+
 #lounge .bundleNotif{
 background-color: white;
+border-bottom: 2px solid #cccccc;
 margin: 8px 0;
+}
+
+.bundleNotif [data-toggle="dropdown"] {
+  border-bottom: 0px solid #cccccc;
+}
+
+
+
+#lounge .childrenNotif .singleNotif{
+  border-bottom: 1px solid white;
+  opacity: 0;
+  margin: 0;
+  background-color: #e4e4e4;
+}
+
+#lounge .childrenNotif .singleNotif:last-child{
+  border-bottom: 0px solid white;
+}
+
+#lounge .childrenNotif .singleNotif .action:first-child{
+   background-color: #e4e4e4;
 }
 
 

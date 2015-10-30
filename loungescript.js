@@ -128,7 +128,7 @@ dropdownArray.forEach(function(el){
       $('i.icon-arrow').removeClass('close');
       $('.childrenNotif .singleNotif').removeClass('fadeOut');
       $('.childrenNotif .singleNotif').addClass('fadeIn');
-      $(".childrenNotif").animate({maxHeight : "9999px"}, 500, easeInQuad);
+      $(".childrenNotif").animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
       event.preventDefault();
       $(".bundleNotifTop").addClass('sticky');
       $("<div id='sticky-anchor'/>").insertBefore(bundleAnchor);
@@ -140,7 +140,7 @@ dropdownArray.forEach(function(el){
 
       $('.childrenNotif .singleNotif').removeClass('fadeIn');
 $('.childrenNotif .singleNotif').addClass('fadeOut');
-      $('.childrenNotif').animate({maxHeight : "0px"}, 500, easeOutQuad);
+      $('.childrenNotif').animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
 
       $('.childrenNotif').removeClass('show');
       $('.sticky').insertBefore('#firstDiv');
