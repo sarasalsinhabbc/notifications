@@ -98,9 +98,9 @@
 			Open Actions
 		 *	-----------------------------------------------	*/
 
-		$('.moreActions').click(function() {
+		$('#openActions').click(function() {
 		
-			$(this).toggleClass('moreActionsDesktop');
+			// $(this).toggleClass('moreActionsDesktop');
 		
 			$(this).parent().toggleClass('actionsOpen');
 
