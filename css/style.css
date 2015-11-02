@@ -504,21 +504,17 @@ height: auto;
 }
 
 #lounge .singleNotif{
-<<<<<<< HEAD
   background-color: white;
   margin: 8px 0;
-=======
-background-color: white;
+  background-color: white;
   border-bottom: 2px solid #cccccc;
-margin: 8px 0;
->>>>>>> origin/gh-pages
+  margin: 8px 0;
 }
 
 
 
 
 #lounge .bundleNotif{
-<<<<<<< HEAD
   background-color: white;
   margin: 8px 0;
 }
@@ -549,11 +545,9 @@ margin: 8px 0;
 .linkLounge a:visited {
   text-decoration: none;
   color: inherit;
-}
-=======
-background-color: white;
-border-bottom: 2px solid #cccccc;
-margin: 8px 0;
+  background-color: white;
+  border-bottom: 2px solid #cccccc;
+  margin: 8px 0;
 }
 
 .bundleNotif [data-toggle="dropdown"] {
@@ -576,8 +570,6 @@ margin: 8px 0;
 #lounge .childrenNotif .singleNotif .action:first-child{
    background-color: #e4e4e4;
 }
-
->>>>>>> origin/gh-pages
 
 /* Querys */
 
