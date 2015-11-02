@@ -485,6 +485,7 @@ height: auto;
 .childrenNotif .singleNotif{
   border-bottom: 1px solid white;
   opacity: 0;
+  background-color: #e4e4e4;
 }
 
 
@@ -503,11 +504,21 @@ height: auto;
 }
 
 #lounge .singleNotif{
+<<<<<<< HEAD
   background-color: white;
   margin: 8px 0;
+=======
+background-color: white;
+  border-bottom: 2px solid #cccccc;
+margin: 8px 0;
+>>>>>>> origin/gh-pages
 }
 
+
+
+
 #lounge .bundleNotif{
+<<<<<<< HEAD
   background-color: white;
   margin: 8px 0;
 }
@@ -539,6 +550,34 @@ height: auto;
   text-decoration: none;
   color: inherit;
 }
+=======
+background-color: white;
+border-bottom: 2px solid #cccccc;
+margin: 8px 0;
+}
+
+.bundleNotif [data-toggle="dropdown"] {
+  border-bottom: 0px solid #cccccc;
+}
+
+
+
+#lounge .childrenNotif .singleNotif{
+  border-bottom: 1px solid white;
+  opacity: 0;
+  margin: 0;
+  background-color: #e4e4e4;
+}
+
+#lounge .childrenNotif .singleNotif:last-child{
+  border-bottom: 0px solid white;
+}
+
+#lounge .childrenNotif .singleNotif .action:first-child{
+   background-color: #e4e4e4;
+}
+
+>>>>>>> origin/gh-pages
 
 /* Querys */
 
