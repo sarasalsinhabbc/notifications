@@ -93,7 +93,6 @@
 			return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 		};
 
-
 		/*	-----------------------------------------------	* 
 			Open Actions
 		 *	-----------------------------------------------	*/
@@ -106,6 +105,16 @@
 
 		});
 
+
+/*	-----------------------------------------------	* 
+	Add Class to new notifications after 5 seconds (TESTING)
+ *	-----------------------------------------------	*/
+
+setTimeout(function () {
+	$('.singleNotif').addClass('newNotification');
+}, 5000);
+	
+
 		/*	-----------------------------------------------	* 
 			Initialisation
 		 *	-----------------------------------------------	*/
@@ -115,7 +124,6 @@
 
 // ONLY TEMP
 $('#initial').css('display', 'none');
-		
 
 		sticky_relocate();
 
