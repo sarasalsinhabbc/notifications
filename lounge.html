@@ -38,17 +38,18 @@
         <div class='wrapper'>
 
             <div id="notificationList" class='wrapper'>
-                <ul >
+                <ul>
 
+                    <p id="sorryMessage">Sorry, you have not flagged any notifications.</p>
 
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -67,7 +68,6 @@
                         </div>
                     </li>
 
-
                     <li class="bundleNotif">
 
                         <div class="bundleNotifTop animated">
@@ -83,124 +83,120 @@
                         </div>
 
 
-                            <i class="icon-arrow"></i></a></div>
-                            <ul class="childrenNotif" id="firstDiv">
-
+                        <i class="icon-arrow"></i></a></div>
+                        <ul class="childrenNotif" id="firstDiv">
                                 
-                    <li class="singleNotif animated">
-                        
-                        <ul class="moreActions">
-                            <li id="openActions" class="more action">
-                                <img src="imgs/more.svg" alt="More">
-                            </li>
-                            <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
-                                <p class="longPrimer">Flag</p>
-                            </li>
-                            <li class="remove action">
-                                <img src="imgs/remove_white.svg" alt="Remove">
-                                <p class="longPrimer">Remove</p>
-                            </li>
-                        </ul>
+                            <li class="singleNotif animated">
+                                
+                                <ul class="moreActions">
+                                    <li class="more action openActions">
+                                        <img src="imgs/more.svg" alt="More">
+                                    </li>
+                                    <li class="flag action">
+                                        <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
+                                        <p class="longPrimer">Flag</p>
+                                    </li>
+                                    <li class="remove action">
+                                        <img src="imgs/remove_white.svg" alt="Remove">
+                                        <p class="longPrimer">Remove</p>
+                                    </li>
+                                </ul>
 
-                        <div class="textNotif">
-                            <img src="imgs/music.svg">
-                            <p class="longPrimer line-clamp">Epidode 09/11/2015</p>
-                            <p class="notificationMeta brevier">
-                                <span class="timeStamp">4 mins ago</span>
-                            </p>
-                        </div>
+                                <div class="textNotif">
+                                    <img src="imgs/music.svg">
+                                    <p class="longPrimer line-clamp">Epidode 09/11/2015</p>
+                                    <p class="notificationMeta brevier">
+                                        <span class="timeStamp">4 mins ago</span>
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="singleNotif animated">
+                                
+                                <ul class="moreActions">
+                                    <li class="more action openActions">
+                                        <img src="imgs/more.svg" alt="More">
+                                    </li>
+                                    <li class="flag action">
+                                        <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
+                                        <p class="longPrimer">Flag</p>
+                                    </li>
+                                    <li class="remove action">
+                                        <img src="imgs/remove_white.svg" alt="Remove">
+                                        <p class="longPrimer">Remove</p>
+                                    </li>
+                                </ul>
+
+                                <div class="textNotif">
+                                    <img src="imgs/music.svg">
+                                    <p class="longPrimer line-clamp">Epidode 06/11/2015</p>
+                                    <p class="notificationMeta brevier">
+                                        <span class="timeStamp">3 days ago</span>
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="singleNotif animated">
+                                
+                                <ul class="moreActions">
+                                    <li class="more action openActions">
+                                        <img src="imgs/more.svg" alt="More">
+                                    </li>
+                                    <li class="flag action">
+                                        <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
+                                        <p class="longPrimer">Flag</p>
+                                    </li>
+                                    <li class="remove action">
+                                        <img src="imgs/remove_white.svg" alt="Remove">
+                                        <p class="longPrimer">Remove</p>
+                                    </li>
+                                </ul>
+
+                                <div class="textNotif">
+                                    <img src="imgs/music.svg">
+                                    <p class="longPrimer line-clamp">Epidode 04/11/2015</p>
+                                    <p class="notificationMeta brevier">
+                                        <span class="timeStamp">5 days ago</span>
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="singleNotif animated">
+                                
+                                <ul class="moreActions">
+                                    <li class="more action openActions">
+                                        <img src="imgs/more.svg" alt="More">
+                                    </li>
+                                    <li class="flag action">
+                                        <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
+                                        <p class="longPrimer">Flag</p>
+                                    </li>
+                                    <li class="remove action">
+                                        <img src="imgs/remove_white.svg" alt="Remove">
+                                        <p class="longPrimer">Remove</p>
+                                    </li>
+                                </ul>
+
+                                <div class="textNotif">
+                                    <img src="imgs/music.svg">
+                                    <p class="longPrimer line-clamp">Epidode 02/11/2015</p>
+                                    <p class="notificationMeta brevier">
+                                        <span class="timeStamp">1 week ago</span>
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
                     </li>
 
-
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
-                                <p class="longPrimer">Flag</p>
-                            </li>
-                            <li class="remove action">
-                                <img src="imgs/remove_white.svg" alt="Remove">
-                                <p class="longPrimer">Remove</p>
-                            </li>
-                        </ul>
-
-                        <div class="textNotif">
-                            <img src="imgs/music.svg">
-                            <p class="longPrimer line-clamp">Epidode 06/11/2015</p>
-                            <p class="notificationMeta brevier">
-                                <span class="timeStamp">3 days ago</span>
-                            </p>
-                        </div>
-                    </li>
-
-
-                    <li class="singleNotif animated">
-                        
-                        <ul class="moreActions">
-                            <li id="openActions" class="more action">
-                                <img src="imgs/more.svg" alt="More">
-                            </li>
-                            <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
-                                <p class="longPrimer">Flag</p>
-                            </li>
-                            <li class="remove action">
-                                <img src="imgs/remove_white.svg" alt="Remove">
-                                <p class="longPrimer">Remove</p>
-                            </li>
-                        </ul>
-
-                        <div class="textNotif">
-                            <img src="imgs/music.svg">
-                            <p class="longPrimer line-clamp">Epidode 04/11/2015</p>
-                            <p class="notificationMeta brevier">
-                                <span class="timeStamp">5 days ago</span>
-                            </p>
-                        </div>
-                    </li>
-
-
-                    <li class="singleNotif animated">
-                        
-                        <ul class="moreActions">
-                            <li id="openActions" class="more action">
-                                <img src="imgs/more.svg" alt="More">
-                            </li>
-                            <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
-                                <p class="longPrimer">Flag</p>
-                            </li>
-                            <li class="remove action">
-                                <img src="imgs/remove_white.svg" alt="Remove">
-                                <p class="longPrimer">Remove</p>
-                            </li>
-                        </ul>
-
-                        <div class="textNotif">
-                            <img src="imgs/music.svg">
-                            <p class="longPrimer line-clamp">Epidode 02/11/2015</p>
-                            <p class="notificationMeta brevier">
-                                <span class="timeStamp">1 week ago</span>
-                            </p>
-                        </div>
-                    </li>
-
-                            </ul>
-                        </li>
-
-                    <li class="singleNotif animated">
-                        
-                        <ul class="moreActions">
-                            <li id="openActions" class="more action">
-                                <img src="imgs/more.svg" alt="More">
-                            </li>
-                            <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -222,11 +218,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -245,15 +241,14 @@
                         </div>
                     </li>
 
-
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -294,11 +289,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -317,11 +312,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -340,11 +335,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -363,11 +358,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -385,11 +380,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -407,11 +402,11 @@
                                         <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -429,11 +424,11 @@
                                         <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -451,11 +446,11 @@
                                         <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -473,11 +468,11 @@
                                         <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -495,11 +490,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -520,11 +515,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -566,11 +561,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -592,11 +587,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -620,11 +615,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -646,11 +641,11 @@
                     <li class="singleNotif animated">
                         
                         <ul class="moreActions">
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
                             <li class="remove action">
@@ -668,8 +663,6 @@
                             </p>
                         </div>
                     </li>
-
-
 
                     </ul>
 
