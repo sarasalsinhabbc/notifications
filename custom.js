@@ -98,21 +98,48 @@
 		 *	-----------------------------------------------	*/
 
 		$('#openActions').click(function() {
-		
-			// $(this).toggleClass('moreActionsDesktop');
-		
-			$(this).parent().toggleClass('actionsOpen');
+			$(this).parent().toggleClass('moreActionsOpened');
+		});
+
+		/*	-----------------------------------------------	* 
+			Open Actions for Mobile
+		 *	-----------------------------------------------	*/
+
+		$('#openActions').click(function() {
+
+			$(this).parent().parent().toggleClass('moreActionsOpenedMobile');
 
 		});
 
+		/*	-----------------------------------------------	* 
+			Resize Height of Actions based on Notifications
+		 *	-----------------------------------------------	*/
+
+		var notificationHeight = $('.singleNotif').height();
+		$('.action').css( 'height', notificationHeight);		
+
+		$( window ).resize(function() {
+			var notificationHeight = $('.singleNotif').height();
+			$('.action').css( 'height', notificationHeight);
+		});
+
+
+		/*	-----------------------------------------------	* 
+			Flag / Flagging
+		 *	-----------------------------------------------	*/
+
+		/* Toggle Flag State */
+		$('#flag_button').click(function() {
+			
+		});
 
 /*	-----------------------------------------------	* 
 	Add Class to new notifications after 5 seconds (TESTING)
  *	-----------------------------------------------	*/
 
-setTimeout(function () {
-	$('.singleNotif').addClass('newNotification');
-}, 5000);
+// setTimeout(function () {
+// 	$('.singleNotif').addClass('newNotification');
+// }, 5000);
 	
 
 		/*	-----------------------------------------------	* 
