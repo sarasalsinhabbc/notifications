@@ -165,6 +165,14 @@ html, body{
    float: left;
 }
 
+.textNotif img{
+   width:24px;
+   height:24px;
+   margin-right: 8px;
+   float: left;
+   opacity:0;
+}
+
 /* Flag Button / Flag */
 #flag_button {
   color: #333333;

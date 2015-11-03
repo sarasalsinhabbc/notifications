@@ -20,7 +20,6 @@ function openActions(){
   }
 };
 
-
 /* Orb */
 function bellIconClick(){
 
