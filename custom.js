@@ -39,7 +39,7 @@
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
 			
-			$('#tray').toggle(function () {
+			$('#tray').toggle(0, function () {
 				$(this).css('height', '600px');
 			});
 
@@ -97,7 +97,7 @@
 			Open Actions
 		 *	-----------------------------------------------	*/
 
-		$('#openActions').click(function() {
+		$('.openActions').click(function() {
 			$(this).parent().toggleClass('moreActionsOpened');
 		});
 
@@ -105,7 +105,7 @@
 			Open Actions for Mobile
 		 *	-----------------------------------------------	*/
 
-		$('#openActions').click(function() {
+		$('.openActions').click(function() {
 
 			$(this).parent().parent().toggleClass('moreActionsOpenedMobile');
 
@@ -128,9 +128,34 @@
 			Flag / Flagging
 		 *	-----------------------------------------------	*/
 
-		/* Toggle Flag State */
+		/* Toggle Flag State and Add Class of Flagged */
 		$('#flag_button').click(function() {
-			
+
+			var flag_icon = $('#flag_icon');
+			var flag_icon_source = flag_icon.attr('src');
+			var swap = flag_icon.attr("data-swap");
+
+			flag_icon.attr('src', swap).attr("data-swap", flag_icon_source);
+
+			$(this).toggleClass('flagged');
+
+			$('#notificationList > ul > li:not(.flaggedAction)').toggle(0);
+		});
+
+		/* Change State of Flag Action and Add Class */
+		$('.flag').click(function() {
+
+			if ( $(this).parent().parent().hasClass('singleNotif') ) {
+
+				var flag_icon_action = $(this).children('#flag_action_icon');
+				var flag_icon_action_source = flag_icon_action.attr('src');
+				var swap = flag_icon_action.attr("data-swap");
+
+				flag_icon_action.attr('src', swap).attr("data-swap", flag_icon_action_source);				
+			}
+
+			$(this).parent().parent().toggleClass('flaggedAction');
+
 		});
 
 /*	-----------------------------------------------	* 
