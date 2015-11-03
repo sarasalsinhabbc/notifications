@@ -140,6 +140,14 @@
 			$(this).toggleClass('flagged');
 
 			$('#notificationList > ul > li:not(.flaggedAction)').toggle(0);
+
+			if( ($('#notificationList ul' ).children().css('display') == 'none') && !($('#notificationList ul' ).children().hasClass('flaggedAction')) ) {
+
+				$('#sorryMessage').show();
+
+			} else {
+				$('#sorryMessage').hide();				
+			}
 		});
 
 		/* Change State of Flag Action and Add Class */
