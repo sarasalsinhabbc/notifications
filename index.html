@@ -64,7 +64,14 @@
                 <div id="trayHeader">
                     <p class="title">NOTIFICATIONS</p>
                     <div class="trayMenu">
-                        <a href="#" id="flag_button"><div class="button"><img src="imgs/flag.svg"><p class="longPrimer">Flagged</p></div></a>
+
+                        <a href="#" id="flag_button">
+                            <div class="button">
+                                <img id="flag_icon" src="imgs/flag.svg" data-swap="imgs/flagged_new.svg">
+                                <p class="longPrimer">Flagged</p>
+                            </div>
+                        </a>
+
                         <div class="button"><img src="imgs/settings.svg"><p class="longPrimer">Settings</p></div>
                     </div>
                 </div>
@@ -80,12 +87,44 @@
                         
                         <ul class="moreActions">
 
-                            <li id="openActions" class="more action">
+                            <li class="more action openActions">
                                 <img src="imgs/more.svg" alt="More">
                             </li>
                                 
                             <li class="flag action">
-                                <img src="imgs/flag_white.svg" alt="Flag">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
+                                <p class="longPrimer">Flag</p>
+                            </li>
+
+                            <li class="remove action">
+                                <img src="imgs/remove_white.svg" alt="Remove">
+                                <p class="longPrimer">Remove</p>
+                            </li>
+                        </ul>
+
+                        <div class="textNotif">
+                            <img src="imgs/iplayer.svg">
+
+                            <p id='iPlayer1Result' class="longPrimer line-clamp"><strong>Answers to the #QSTeaser from @QuestionofSport J Savea (8), N Milner-Skudder (6), B Habana (6), G Davies (5), JP Pietersen (5), J Imhoff (5)</strong></p>
+
+                            <p id="notificationMeta" class="brevier">
+                                <span class="productName">Product</span>
+                                <span class="timeStamp">Time Stamp</span>
+                            </p>
+                        </div>
+
+                    </li>
+
+                    <li class="singleNotif animated">
+                        
+                        <ul class="moreActions">
+
+                            <li class="more action openActions">
+                                <img src="imgs/more.svg" alt="More">
+                            </li>
+                                
+                            <li class="flag action">
+                                <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                                 <p class="longPrimer">Flag</p>
                             </li>
 
