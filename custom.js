@@ -285,7 +285,7 @@
 		$('#includeOrb').load('orb/orb.html');
 
 // ONLY TEMP
-//$('#initial').css('display', 'none');
+$('#initial').css('display', 'none');
 
 		//sticky_relocate();
 
