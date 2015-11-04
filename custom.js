@@ -190,12 +190,41 @@
 
 				setTimeout(function (){
 
-				  getRemoveItem.hide('slow', function() {
+				  getRemoveItem.slideUp('slow', function() {
 				  	$(this).remove();
 				  });
 
 				}, 2000);
 
+			}
+
+		});
+
+		/*	-----------------------------------------------	* 
+			Add
+		 *	-----------------------------------------------	*/
+
+		function changeAddToTick(getThis) {
+
+			var getAddLabel = getThis.parent().parent();
+
+			var getAddLabel = getThis.find('.longPrimer');
+
+			getAddLabel.html( getAddLabel.text() == 'Add' ? 'Added' : 'Add');
+
+			var add_icon_action = getThis.children('#add_action_icon');
+			var add_icon_action_source = add_icon_action.attr('src');
+			var swap = add_icon_action.attr("data-swap");
+
+			add_icon_action.attr('src', swap).attr("data-swap", add_icon_action_source);
+
+			add_icon_action.parent().parent().parent().toggleClass('addedNotification');
+		}
+
+		$('.add').click(function() {
+
+			if ( $(this).parent().parent().hasClass('singleNotif') ) {
+				changeAddToTick( $(this) );
 			}
 
 		});
