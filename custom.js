@@ -166,6 +166,40 @@
 
 		});
 
+
+		/*	-----------------------------------------------	* 
+			Remove
+		 *	-----------------------------------------------	*/
+
+		$('.remove').click(function() {
+
+			if( $(this).parent().parent().hasClass('singleNotif') ) {
+
+				var getRemoveItem = $(this).parent().parent();
+
+				var getRemoveLabel = $(this).find('.longPrimer');
+				getRemoveLabel.replaceWith('<p class="longPrimer">Removing</p>');
+
+				var remove_icon_action = $(this).children('#remove_action_icon');
+				var remove_icon_action_source = remove_icon_action.attr('src');
+				var swap = remove_icon_action.attr("data-swap");
+
+				remove_icon_action.attr('src', swap).attr("data-swap", remove_icon_action_source);
+
+				remove_icon_action.toggleClass('loadingSpinner');
+
+				setTimeout(function (){
+
+				  getRemoveItem.hide('slow', function() {
+				  	$(this).remove();
+				  });
+
+				}, 2000);
+
+			}
+
+		});
+
 /*	-----------------------------------------------	* 
 	Add Class to new notifications after 5 seconds (TESTING)
  *	-----------------------------------------------	*/
