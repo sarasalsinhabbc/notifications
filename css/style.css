@@ -265,7 +265,7 @@ html, body{
 .moreActions {
   display: table;
   float:right;
-  margin-right: -130px;
+  margin-right: -160px;
   position: relative;
   right: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -278,7 +278,7 @@ html, body{
 @media only screen and (max-width: 600px) {
 
   .moreActions {
-    margin-right: -109px;
+    margin-right: -160px;
   }
 
 }
@@ -312,6 +312,7 @@ html, body{
 
 
 .action {
+  min-width: 80px;
   display: table-cell;
   vertical-align: middle;
   padding: 11px;
@@ -321,6 +322,10 @@ html, body{
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:        border-box;
+}
+
+.more.action {
+  min-width: 50px;
 }
 
 .action:last-child{
@@ -337,6 +342,33 @@ html, body{
 .remove:hover {
   background-color: #006cae;
 }
+
+.loadingSpinner {
+  -webkit-animation: rotateSpinner 1.4s infinite linear;
+  animation: rotateSpinner 1.4s infinite linear;
+}
+
+@-webkit-keyframes rotateSpinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateSpinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 
 /* Overriding GEL typography */
 
