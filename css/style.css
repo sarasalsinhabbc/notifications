@@ -333,7 +333,8 @@ html, body{
 }
 
 .flag,
-.remove {
+.remove,
+.add {
   background-color: #007bc7;
   border-right: 1px solid #ffffff;
 }
@@ -373,7 +374,8 @@ html, body{
 /* Overriding GEL typography */
 
 .flag .longPrimer,
-.remove .longPrimer {
+.remove .longPrimer,
+.add .longPrimer {
   display: block;
   padding-top: 0;
 }
@@ -382,7 +384,8 @@ html, body{
 
 .more img,
 .flag img,
-.remove img {
+.remove img,
+.add img {
   width:32px;
   height:32px;
   display: block;
@@ -392,8 +395,11 @@ html, body{
 
 @media only screen and (max-width: 600px) {
 
+  .action { min-width: inherit; }
+
   .flag.action p,
-  .remove.action p { display: none; }
+  .remove.action p,
+  .add.action p { display: none; }
 
   .action { padding: 20px 11px; }
 
