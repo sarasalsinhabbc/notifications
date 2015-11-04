@@ -39,9 +39,7 @@
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
 			
-			$('#tray').toggle(0, function () {
-				$(this).css('height', '600px');
-			});
+			$('#tray').slideToggle('slow');
 
 		});
 
@@ -106,9 +104,7 @@
 		 *	-----------------------------------------------	*/
 
 		$('.openActions').click(function() {
-
 			$(this).parent().parent().toggleClass('moreActionsOpenedMobile');
-
 		});
 
 		/*	-----------------------------------------------	* 
