@@ -32,18 +32,120 @@
 			} else {
 				$('.sticky').insertBefore('#firstDiv');
 			}
-		}
+		};
 
 		/*	-----------------------------------------------	* 
 			Open ORB Panel
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
-			
+
+			getFavourites();
+
 			$('#tray').toggle(0, function () {
 				$(this).css('height', '600px');
 			});
 
 		});
+
+		/*	-----------------------------------------------	* 
+			Write favourites to file
+		 *	-----------------------------------------------	*/
+
+		 function writeFavourites() {
+
+		 	$("#initial").css({display : "none"});
+
+		 	$.ajax({
+		 		url: 'writeFavourites.php',
+		 		type: 'post',
+		 		data: { result1: $("#iPlayerField1").val(), result2: $("#iPlayerField2").val(), result3: $("#iPlayerField3").val(), result4: $("#presenterField1").val(), result5: $("#presenterField2").val(), result6: $("#locationField").val(), result7: $("#topicField").val() },
+		 		success: function(data){
+		 		}
+		 	}); 
+
+		 };
+
+		/*	-----------------------------------------------	* 
+			Get favourites from file and write in list
+		 *	-----------------------------------------------	*/
+
+		 function getFavourites() {
+
+		 	$.ajax({
+		 		url: 'readFavourite1.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#iPlayer1Result").html(data + ' has a new episode!');
+		 		}
+		 	});
+
+		 	$.ajax({
+		 		url: 'readFavourite2.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#iPlayer2Result").html(data  + ' has a new episode!');
+		 		}
+		 	});
+
+		 	$.ajax({
+		 		url: 'readFavourite3.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#iPlayer3Result").html(data  + ' has a new episode!');
+		 		}
+		 	});
+
+		 	$.ajax({
+		 		url: 'readFavourite4.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#presenter1Result").html(data + ' added a new track!');
+		 		}
+		 	});
+
+		 	$.ajax({
+		 		url: 'readFavourite5.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#presenter2Result").html(data + ' added a new track!');
+		 		}
+		 	});
+
+		 	$.ajax({
+		 		url: 'readFavourite6.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#locationResult").html(data + ' has a severe incident! OMG!');
+		 		}
+		 	});
+
+		 	$.ajax({
+		 		url: 'readFavourite7.php',
+		 		dataType: 'json',
+		 		type:'post',
+		 		success: function(data){
+		 			$("#topicResult").html(data + ' has been found in Mars!');
+		 		}
+		 	});
+		};
+
+
+		/*	-----------------------------------------------	* 
+			Form actions
+		 *	-----------------------------------------------	*/
+  			
+  			$("#subButton").click(writeFavourites);
+
+  			$("#skipLink").click(function (){
+  				$("#initial").css({display : "none"});
+  			});
+
 
 		/*	-----------------------------------------------	* 
 			Bundle Opening & Closing
@@ -183,9 +285,9 @@
 		$('#includeOrb').load('orb/orb.html');
 
 // ONLY TEMP
-$('#initial').css('display', 'none');
+//$('#initial').css('display', 'none');
 
-		sticky_relocate();
+		//sticky_relocate();
 
 	});
 
