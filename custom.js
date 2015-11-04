@@ -8,33 +8,6 @@
 	$(document).ready(function() {
 
 		/*	-----------------------------------------------	* 
-			Bundle Sticky
-		 *	-----------------------------------------------	*/
-		function sticky_relocate() {
-
-			var window_top = $('#notificationList').scrollTop();
-			var div_top = $('#sticky-anchor').offset().top;
-			var div_stop = $('#sticky-anchor-stop').offset().top;
-
-			if (window_top > div_top) {
-				$('.clonedSticky').addClass('stick');
-				$('.clonedSticky').css('display', 'block');
-			} else {
-				$('.sticky').removeClass('stick');
-				$('.clonedSticky').css('display', 'none');
-			}
-
-			if (window_top > div_stop) {
-				$('.clonedSticky').css('display', 'none');
-				$('.sticky').removeClass('stick');
-				$('.sticky').insertBefore('#lastDiv');
-				$('.sticky').addClass('stickStop');
-			} else {
-				$('.sticky').insertBefore('#firstDiv');
-			}
-		};
-
-		/*	-----------------------------------------------	* 
 			Open ORB Panel
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
@@ -76,7 +49,8 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#iPlayer1Result").html(data + ' has a new episode!');
+		 			$("#iPlayer1Result1").html(data + ' has 4 new episodes. Check it out!');
+		 			$("#iPlayer1Result2").html(data + ' Episode 30/10/2015 expires today. Don&#39;t miss out!');
 		 		}
 		 	});
 
@@ -85,7 +59,8 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#iPlayer2Result").html(data  + ' has a new episode!');
+		 			$("#iPlayer2Result1").html(data  + ' Episode 12, Season 1 expires in a week. Don&#39;t miss out!');
+		 			$("#iPlayer2Result2").html(data  + ' Episode 3 Season 2 in now available. Check it out!');
 		 		}
 		 	});
 
@@ -94,7 +69,7 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#iPlayer3Result").html(data  + ' has a new episode!');
+		 			$("#iPlayer3Result1").html(data  + ' has 2 new episodes. Check it out!');
 		 		}
 		 	});
 
@@ -103,7 +78,7 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#presenter1Result").html(data + ' added a new track!');
+		 			$("#presenter1Result1").html(data + ' added Simba Simba - Delux. Tune in!');
 		 		}
 		 	});
 
@@ -112,7 +87,7 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#presenter2Result").html(data + ' added a new track!');
+		 			$("#presenter2Result1").html(data + ' added 10 new tracks. Stay tuned!');
 		 		}
 		 	});
 
@@ -121,7 +96,7 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#locationResult").html(data + ' has a severe incident! OMG!');
+		 			$("#travelResult1").html(data + ' as a severe accident. Get more details.');
 		 		}
 		 	});
 
@@ -130,7 +105,8 @@
 		 		dataType: 'json',
 		 		type:'post',
 		 		success: function(data){
-		 			$("#topicResult").html(data + ' has been found in Mars!');
+		 			$("#topicResult1").html(data + ' gains increasing awareness in the UK.');
+		 			$("#topicResult2").html('UK police in investigating the effects of ' + data + ' on their everyday work.');
 		 		}
 		 	});
 		};
@@ -148,52 +124,62 @@
 
 
 		/*	-----------------------------------------------	* 
+			Bundle Sticky
+		 *	-----------------------------------------------	*/
+		 function sticky_relocate() {
+		 	var window_top = $("#notificationList").scrollTop();
+		 	var div_top = $('#sticky-anchor').offset().top;
+		 	var div_stop = $('#sticky-anchor-stop').offset().top;
+
+		 	if (window_top > div_top) {
+		 		$('.clonedSticky').addClass('stick');
+		 		$('.clonedSticky').css('display', 'block');
+		 	} else {
+		 		$('.sticky').removeClass('stick');
+		 		$('.clonedSticky').css('display', 'none');
+		 	}
+
+		 	if (window_top > div_stop) {
+		 		$('.clonedSticky').css('display', 'none');
+		 		$('.sticky').removeClass('stick');
+		 		$('.sticky').insertBefore('#lastDiv');
+		 		$('.sticky').addClass('stickStop');
+
+		 	} else {
+		 		$('.sticky').insertBefore('#firstDiv');
+		 	}
+
+		 }
+
+
+		/*	-----------------------------------------------	* 
 			Bundle Opening & Closing
 		 *	-----------------------------------------------	*/
 
-		var dropdown = document.querySelectorAll('.bundleNotif');
-		var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
-		dropdownArray.forEach(function(el){
-			var button = el.querySelector('a[data-toggle="dropdown"]'),
-			menu = el.querySelector('.childrenNotif'),
-			bundleTop = el.querySelector('.bundleNotifTop'),
-			bundleAnchor = el.querySelector('.childrenNotif li'),
-			arrow = button.querySelector('i.icon-arrow');
 
-			button.onclick = function(event) {
-				if(!menu.hasClass('show')) {
-					menu.classList.add('show');
-					menu.classList.remove('hide');
-					arrow.classList.add('open');
-					arrow.classList.remove('close');
-					event.preventDefault();
-					bundleTop.classList.add('sticky');
-					$("<div id='sticky-anchor'/>").insertBefore(bundleAnchor);
-					$("#notificationList").scroll(sticky_relocate);
-					sticky_relocate();
-					$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
-				}
-				else {
-					$('.sticky').insertBefore('#firstDiv');
-					menu.classList.remove('show');
-					menu.classList.add('hide');
-					arrow.classList.remove('open');
-					arrow.classList.add('close');
-					event.preventDefault();
-					bundleTop.classList.remove('sticky');
-					bundleTop.classList.remove('stick');
-					bundleTop.classList.remove('stickStop');
-					$("#sticky-anchor").remove();
-					$("#notificationList").off("scroll", sticky_relocate);
-					$('.clonedSticky').remove();
-				}
-			};
+		$('.openBundle').click(function() {
+			var bundleItems = $(this).parent().parent().siblings('.childrenNotif');
+
+		 		if(!bundleItems.hasClass('show')) {
+		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
+		 			bundleItems.addClass('show');
+		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
+		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
+		 			$('.arrow').removeClass('close');
+		 			$('.arrow').addClass('open');
+		 		}
+		 		else {
+		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
+		 			$('.childrenNotif .singleNotif').removeClass('fadeIn');
+		 			$('.childrenNotif .singleNotif').addClass('fadeOut');
+		 			bundleItems.removeClass('show');
+		 			$('.arrow').removeClass('open');
+		 			$('.arrow').addClass('close');
+		 		}
+
 		});
 
-		Element.prototype.hasClass = function(className) {
-			return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
-		};
 
 		/*	-----------------------------------------------	* 
 			Open Actions
