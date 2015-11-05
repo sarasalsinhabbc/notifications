@@ -257,12 +257,8 @@
 		 		if(!bundleItems.hasClass('show')) {
 		 			closeOtherBundles();
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
-<<<<<<< HEAD
 		 			bundleItems.toggleClass('show');
-=======
 		 			bundleItems.addClass('show');
-
->>>>>>> origin/gh-pages
 		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
 		 			bundleItems.find('.singleNotif').addClass('fadeIn');
 		 			arrowRotate.toggleClass('open');
@@ -270,10 +266,7 @@
       				$("<div id='sticky-anchor2'/>").insertBefore(bundleTop);
       				$("#notificationList").scroll(sticky_relocate);
       				//sticky_relocate();
-<<<<<<< HEAD
       				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
-=======
-
       				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
 
 		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
@@ -287,13 +280,11 @@
 //sticky_relocate();
 
 //$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
->>>>>>> origin/gh-pages
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
 		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
 		 			bundleItems.find('.singleNotif').addClass('fadeOut');
-<<<<<<< HEAD
 		 			bundleItems.toggleClass('show');
 		 			arrowRotate.toggleClass('open');
 		 			$('.sticky').insertBefore(bundleItems);
@@ -301,7 +292,6 @@
 				    $("#notificationList").off("scroll", sticky_relocate);
 				    $("#sticky-anchor2").remove();
 				    $('.clonedSticky').remove();
-=======
 		 			bundleItems.removeClass('show');
 
 		 			arrowRotate.removeClass('open');
@@ -327,7 +317,6 @@
 
 //$("#sticky-anchor").remove();
 //$('.clonedSticky').remove();
->>>>>>> origin/gh-pages
 		 		}
 		});
 
