@@ -5,7 +5,7 @@
 	<?php include('orb.php'); ?>
 
 	<!-- Load Notifications / Tray -->
-	<?php inlcude('notifications.php');
+	<?php include('notifications.php'); ?>
 
 <!-- Load Footer -->
 <?php include('footer.php'); ?>
