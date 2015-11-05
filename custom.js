@@ -11,17 +11,10 @@
 			Open ORB Panel
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
-<<<<<<< HEAD
 
 			getFavourites();
 
-			$('#tray').toggle(0, function () {
-				$(this).css('height', '600px');
-			});
-=======
-			
 			$('#tray').slideToggle('slow');
->>>>>>> origin/gh-pages
 
 		});
 
@@ -124,13 +117,14 @@
   			$("#subButton").click(writeFavourites);
 
   			$("#skipLink").click(function (){
-  				$("#initial").css({display : "none"});
+  				$("#initial").hide();
   			});
 
 
 		/*	-----------------------------------------------	* 
 			Bundle Sticky
 		 *	-----------------------------------------------	*/
+
 		 function sticky_relocate() {
 		 	var window_top = $("#notificationList").scrollTop();
 		 	var div_top = $('#sticky-anchor').offset().top;
@@ -160,8 +154,6 @@
 		/*	-----------------------------------------------	* 
 			Bundle Opening & Closing
 		 *	-----------------------------------------------	*/
-
-
 
 		$('.openBundle').click(function() {
 			var bundleItems = $(this).parent().parent().siblings('.childrenNotif');
@@ -233,9 +225,7 @@
 			$('#notificationList > ul > li:not(.flaggedAction)').toggle(0);
 
 			if( ($('#notificationList ul' ).children().css('display') == 'none') && !($('#notificationList ul' ).children().hasClass('flaggedAction')) ) {
-
 				$('#sorryMessage').show();
-
 			} else {
 				$('#sorryMessage').hide();				
 			}
@@ -337,7 +327,7 @@
 		$('#includeOrb').load('orb/orb.html');
 
 // ONLY TEMP
-$('#initial').css('display', 'none');
+//$('#initial').css('display', 'none');
 
 		//sticky_relocate();
 
