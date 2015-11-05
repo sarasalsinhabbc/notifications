@@ -157,6 +157,7 @@
 
 		$('.openBundle').click(function() {
 			var bundleItems = $(this).parent().parent().siblings('.childrenNotif');
+			var bundleTop = $(this).parent().parent();
 
 		 		if(!bundleItems.hasClass('show')) {
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
@@ -165,6 +166,13 @@
 		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
 		 			$('.arrow').removeClass('close');
 		 			$('.arrow').addClass('open');
+		 			bundleTop.addClass('sticky');
+      				$("<div id='sticky-anchor'/>").insertBefore(bundleTop);
+
+      				$("#notificationList").scroll(sticky_relocate);
+      				sticky_relocate();
+
+      				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
@@ -173,9 +181,22 @@
 		 			bundleItems.removeClass('show');
 		 			$('.arrow').removeClass('open');
 		 			$('.arrow').addClass('close');
+		 			$('.sticky').insertBefore('#firstDiv');
+		 			bundleTop.removeClass('sticky');
+				    bundleTop.removeClass('stick');
+
+				    bundleTop.removeClass('stickStop');
+				    $("#notificationList").off("scroll", sticky_relocate);
+
+				    $("#sticky-anchor").remove();
+				    $('.clonedSticky').remove();
 		 		}
 
 		});
+
+Element.prototype.hasClass = function(className) {
+  return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+};
 
 
 		/*	-----------------------------------------------	* 
@@ -327,7 +348,7 @@
 		$('#includeOrb').load('orb/orb.html');
 
 // ONLY TEMP
-//$('#initial').css('display', 'none');
+$('#initial').hide();
 
 		//sticky_relocate();
 
