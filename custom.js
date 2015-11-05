@@ -164,7 +164,7 @@
 		 		if(!bundleItems.hasClass('show')) {
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
 		 			bundleItems.addClass('show');
-<<<<<<< Updated upstream
+
 		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
 		 			bundleItems.find('.singleNotif').addClass('fadeIn');
 		 			arrowRotate.removeClass('close');
@@ -176,7 +176,7 @@
       				//sticky_relocate();
 
       				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
-=======
+
 		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
 		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
 		 			$('.arrow').removeClass('close');
@@ -188,14 +188,13 @@
 //sticky_relocate();
 
 //$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
->>>>>>> Stashed changes
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
 		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
 		 			bundleItems.find('.singleNotif').addClass('fadeOut');
 		 			bundleItems.removeClass('show');
-<<<<<<< Updated upstream
+
 		 			arrowRotate.removeClass('open');
 		 			arrowRotate.addClass('close');
 		 			//$('.sticky').insertBefore('#firstDiv');
@@ -207,7 +206,7 @@
 
 				    //$("#sticky-anchor").remove();
 				    //$('.clonedSticky').remove();
-=======
+
 		 			$('.arrow').removeClass('open');
 		 			$('.arrow').addClass('close');
 //$('.sticky').insertBefore('#firstDiv');
@@ -219,7 +218,6 @@
 
 //$("#sticky-anchor").remove();
 //$('.clonedSticky').remove();
->>>>>>> Stashed changes
 		 		}
 
 		});
