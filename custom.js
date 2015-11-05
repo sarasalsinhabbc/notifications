@@ -11,12 +11,17 @@
 			Open ORB Panel
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
+<<<<<<< HEAD
 
 			getFavourites();
 
 			$('#tray').toggle(0, function () {
 				$(this).css('height', '600px');
 			});
+=======
+			
+			$('#tray').slideToggle('slow');
+>>>>>>> origin/gh-pages
 
 		});
 
@@ -194,9 +199,7 @@
 		 *	-----------------------------------------------	*/
 
 		$('.openActions').click(function() {
-
 			$(this).parent().parent().toggleClass('moreActionsOpenedMobile');
-
 		});
 
 		/*	-----------------------------------------------	* 
@@ -251,6 +254,69 @@
 			}
 
 			$(this).parent().parent().toggleClass('flaggedAction');
+
+		});
+
+
+		/*	-----------------------------------------------	* 
+			Remove
+		 *	-----------------------------------------------	*/
+
+		$('.remove').click(function() {
+
+			if( $(this).parent().parent().hasClass('singleNotif') ) {
+
+				var getRemoveItem = $(this).parent().parent();
+
+				var getRemoveLabel = $(this).find('.longPrimer');
+				getRemoveLabel.replaceWith('<p class="longPrimer">Removing</p>');
+
+				var remove_icon_action = $(this).children('#remove_action_icon');
+				var remove_icon_action_source = remove_icon_action.attr('src');
+				var swap = remove_icon_action.attr("data-swap");
+
+				remove_icon_action.attr('src', swap).attr("data-swap", remove_icon_action_source);
+
+				remove_icon_action.toggleClass('loadingSpinner');
+
+				setTimeout(function (){
+
+				  getRemoveItem.slideUp('slow', function() {
+				  	$(this).remove();
+				  });
+
+				}, 2000);
+
+			}
+
+		});
+
+		/*	-----------------------------------------------	* 
+			Add
+		 *	-----------------------------------------------	*/
+
+		function changeAddToTick(getThis) {
+
+			var getAddLabel = getThis.parent().parent();
+
+			var getAddLabel = getThis.find('.longPrimer');
+
+			getAddLabel.html( getAddLabel.text() == 'Add' ? 'Added' : 'Add');
+
+			var add_icon_action = getThis.children('#add_action_icon');
+			var add_icon_action_source = add_icon_action.attr('src');
+			var swap = add_icon_action.attr("data-swap");
+
+			add_icon_action.attr('src', swap).attr("data-swap", add_icon_action_source);
+
+			add_icon_action.parent().parent().parent().toggleClass('addedNotification');
+		}
+
+		$('.add').click(function() {
+
+			if ( $(this).parent().parent().hasClass('singleNotif') ) {
+				changeAddToTick( $(this) );
+			}
 
 		});
 
