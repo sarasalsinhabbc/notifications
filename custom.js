@@ -157,40 +157,41 @@
 		 *	-----------------------------------------------	*/
 
 		$('.openBundle').click(function() {
-			var bundleItems = $(this).parent().parent().siblings('.childrenNotif');
-			var bundleTop = $(this).parent().parent();
+			var bundleItems = $(this).parent().parent().siblings('.childrenNotif'),
+			bundleTop = $(this).parent().parent(),
+			arrowRotate = $(this);
 
 		 		if(!bundleItems.hasClass('show')) {
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
 		 			bundleItems.addClass('show');
-		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
-		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
-		 			$('.arrow').removeClass('close');
-		 			$('.arrow').addClass('open');
-		 			bundleTop.addClass('sticky');
-      				$("<div id='sticky-anchor'/>").insertBefore(bundleTop);
+		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
+		 			bundleItems.find('.singleNotif').addClass('fadeIn');
+		 			arrowRotate.removeClass('close');
+		 			arrowRotate.addClass('open');
+		 			//bundleTop.addClass('sticky');
+      				//$("<div id='sticky-anchor'/>").insertBefore(bundleTop);
 
-      				$("#notificationList").scroll(sticky_relocate);
-      				sticky_relocate();
+      				//$("#notificationList").scroll(sticky_relocate);
+      				//sticky_relocate();
 
-      				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+      				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
-		 			$('.childrenNotif .singleNotif').removeClass('fadeIn');
-		 			$('.childrenNotif .singleNotif').addClass('fadeOut');
+		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
+		 			bundleItems.find('.singleNotif').addClass('fadeOut');
 		 			bundleItems.removeClass('show');
-		 			$('.arrow').removeClass('open');
-		 			$('.arrow').addClass('close');
-		 			$('.sticky').insertBefore('#firstDiv');
-		 			bundleTop.removeClass('sticky');
-				    bundleTop.removeClass('stick');
+		 			arrowRotate.removeClass('open');
+		 			arrowRotate.addClass('close');
+		 			//$('.sticky').insertBefore('#firstDiv');
+		 			//bundleTop.removeClass('sticky');
+				    //bundleTop.removeClass('stick');
 
-				    bundleTop.removeClass('stickStop');
-				    $("#notificationList").off("scroll", sticky_relocate);
+				   // bundleTop.removeClass('stickStop');
+				    //$("#notificationList").off("scroll", sticky_relocate);
 
-				    $("#sticky-anchor").remove();
-				    $('.clonedSticky').remove();
+				    //$("#sticky-anchor").remove();
+				    //$('.clonedSticky').remove();
 		 		}
 
 		});
