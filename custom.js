@@ -15,6 +15,7 @@
 			getFavourites();
 
 			$('#tray').slideToggle('slow');
+			$('#lounge').slideToggle('slow');
 
 		});
 
