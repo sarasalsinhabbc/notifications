@@ -3,7 +3,6 @@
 
 	<!-- Load ORB -->
 	<?php include('orb.php'); ?>
-	
 
 	<!--Tray-->
 	<div id="tray">

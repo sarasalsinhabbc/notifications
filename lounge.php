@@ -5,7 +5,7 @@
 	<?php include('orb.php'); ?>
 	
 	<!--Tray-->
-	<div id="tray">
+	<div id="lounge">
 
 		<!-- Load Notification Header Home -->
 		<?php include('notification_header_lounge.php'); ?>
