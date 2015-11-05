@@ -257,7 +257,12 @@
 		 		if(!bundleItems.hasClass('show')) {
 		 			closeOtherBundles();
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
+<<<<<<< HEAD
 		 			bundleItems.toggleClass('show');
+=======
+		 			bundleItems.addClass('show');
+
+>>>>>>> origin/gh-pages
 		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
 		 			bundleItems.find('.singleNotif').addClass('fadeIn');
 		 			arrowRotate.toggleClass('open');
@@ -265,12 +270,30 @@
       				$("<div id='sticky-anchor2'/>").insertBefore(bundleTop);
       				$("#notificationList").scroll(sticky_relocate);
       				//sticky_relocate();
+<<<<<<< HEAD
       				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+=======
+
+      				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+
+		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
+		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
+		 			$('.arrow').removeClass('close');
+		 			$('.arrow').addClass('open');
+//bundleTop.addClass('sticky');
+// $("<div id='sticky-anchor'/>").insertBefore(bundleTop);
+
+// $("#notificationList").scroll(sticky_relocate);
+//sticky_relocate();
+
+//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+>>>>>>> origin/gh-pages
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
 		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
 		 			bundleItems.find('.singleNotif').addClass('fadeOut');
+<<<<<<< HEAD
 		 			bundleItems.toggleClass('show');
 		 			arrowRotate.toggleClass('open');
 		 			$('.sticky').insertBefore(bundleItems);
@@ -278,6 +301,33 @@
 				    $("#notificationList").off("scroll", sticky_relocate);
 				    $("#sticky-anchor2").remove();
 				    $('.clonedSticky').remove();
+=======
+		 			bundleItems.removeClass('show');
+
+		 			arrowRotate.removeClass('open');
+		 			arrowRotate.addClass('close');
+		 			//$('.sticky').insertBefore('#firstDiv');
+		 			//bundleTop.removeClass('sticky');
+				    //bundleTop.removeClass('stick');
+
+				   // bundleTop.removeClass('stickStop');
+				    //$("#notificationList").off("scroll", sticky_relocate);
+
+				    //$("#sticky-anchor").remove();
+				    //$('.clonedSticky').remove();
+
+		 			$('.arrow').removeClass('open');
+		 			$('.arrow').addClass('close');
+//$('.sticky').insertBefore('#firstDiv');
+//bundleTop.removeClass('sticky');
+//bundleTop.removeClass('stick');
+
+//bundleTop.removeClass('stickStop');
+//$("#notificationList").off("scroll", sticky_relocate);
+
+//$("#sticky-anchor").remove();
+//$('.clonedSticky').remove();
+>>>>>>> origin/gh-pages
 		 		}
 		});
 
@@ -347,9 +397,6 @@
 			Resize Height of Actions based on Notifications
 		 *	-----------------------------------------------	*/
 
-		var notificationHeight = $('.singleNotif').height();
-		$('.action').css( 'height', notificationHeight);		
-
 		$( window ).resize(function() {
 			var notificationHeight = $('.singleNotif').height();
 			$('.action').css( 'height', notificationHeight);
@@ -371,7 +418,8 @@
 
 			$(this).toggleClass('flagged');
 
-			$('#notificationList > ul > li:not(.flaggedAction)').toggle(0);
+			$('#notificationList > ul > li:not(.flaggedBundle) + li:not(.flaggedAction)').toggle(0);
+			$('#notificationList > ul > li:not(.flaggedAction) > ul.childrenNotif > li:not(.flaggedAction)').toggle(0);
 
 			if( ($('#notificationList ul' ).children().css('display') == 'none') && !($('#notificationList ul' ).children().hasClass('flaggedAction')) ) {
 				$('#sorryMessage').show();
@@ -393,6 +441,14 @@
 			}
 
 			$(this).parent().parent().toggleClass('flaggedAction');
+
+			var isBundle = $(this).parent().parent().parent().parent();
+
+			if ( isBundle.hasClass('bundleNotif') ) {
+				
+				isBundle.toggleClass('flaggedBundle');
+
+			}
 
 		});
 
@@ -425,6 +481,22 @@
 				  });
 
 				}, 2000);
+
+				/*
+				 * Remove Bundle Notification if no
+				 * notifications exist in the bundle
+				 */
+				if ( $(this).parent().parent().parent().children().length == 2 ) {
+
+					setTimeout(function (){
+
+						getRemoveItem.parent().parent().slideUp('slow', function() {
+							$(this).remove();
+						});
+
+					}, 2000);
+
+				}
 
 			}
 
