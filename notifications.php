@@ -747,7 +747,9 @@
             
         </li>
 
-
+        <li class="singleNotif animated">
+            <a href="lounge.php" class="loungeButton longPrimer">Go to Lounge</a>
+        </li>
 
     </ul>
 </div>

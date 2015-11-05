@@ -257,7 +257,7 @@ html, body{
 /* Lounge */
 .loungeButton {
   width: 33%;
-  margin:0 auto;
+  margin:12px auto;
   text-align: center;
   display: block;
   background-color: #007bc7;
