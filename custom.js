@@ -164,6 +164,7 @@
 		 		if(!bundleItems.hasClass('show')) {
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
 		 			bundleItems.addClass('show');
+<<<<<<< Updated upstream
 		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
 		 			bundleItems.find('.singleNotif').addClass('fadeIn');
 		 			arrowRotate.removeClass('close');
@@ -175,12 +176,26 @@
       				//sticky_relocate();
 
       				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+=======
+		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
+		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
+		 			$('.arrow').removeClass('close');
+		 			$('.arrow').addClass('open');
+//bundleTop.addClass('sticky');
+// $("<div id='sticky-anchor'/>").insertBefore(bundleTop);
+
+// $("#notificationList").scroll(sticky_relocate);
+//sticky_relocate();
+
+//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+>>>>>>> Stashed changes
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
 		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
 		 			bundleItems.find('.singleNotif').addClass('fadeOut');
 		 			bundleItems.removeClass('show');
+<<<<<<< Updated upstream
 		 			arrowRotate.removeClass('open');
 		 			arrowRotate.addClass('close');
 		 			//$('.sticky').insertBefore('#firstDiv');
@@ -192,6 +207,19 @@
 
 				    //$("#sticky-anchor").remove();
 				    //$('.clonedSticky').remove();
+=======
+		 			$('.arrow').removeClass('open');
+		 			$('.arrow').addClass('close');
+//$('.sticky').insertBefore('#firstDiv');
+//bundleTop.removeClass('sticky');
+//bundleTop.removeClass('stick');
+
+//bundleTop.removeClass('stickStop');
+//$("#notificationList").off("scroll", sticky_relocate);
+
+//$("#sticky-anchor").remove();
+//$('.clonedSticky').remove();
+>>>>>>> Stashed changes
 		 		}
 
 		});
@@ -221,9 +249,6 @@ Element.prototype.hasClass = function(className) {
 			Resize Height of Actions based on Notifications
 		 *	-----------------------------------------------	*/
 
-		var notificationHeight = $('.singleNotif').height();
-		$('.action').css( 'height', notificationHeight);		
-
 		$( window ).resize(function() {
 			var notificationHeight = $('.singleNotif').height();
 			$('.action').css( 'height', notificationHeight);
@@ -245,7 +270,8 @@ Element.prototype.hasClass = function(className) {
 
 			$(this).toggleClass('flagged');
 
-			$('#notificationList > ul > li:not(.flaggedAction)').toggle(0);
+			$('#notificationList > ul > li:not(.flaggedBundle) + li:not(.flaggedAction)').toggle(0);
+			$('#notificationList > ul > li:not(.flaggedAction) > ul.childrenNotif > li:not(.flaggedAction)').toggle(0);
 
 			if( ($('#notificationList ul' ).children().css('display') == 'none') && !($('#notificationList ul' ).children().hasClass('flaggedAction')) ) {
 				$('#sorryMessage').show();
@@ -267,6 +293,14 @@ Element.prototype.hasClass = function(className) {
 			}
 
 			$(this).parent().parent().toggleClass('flaggedAction');
+
+			var isBundle = $(this).parent().parent().parent().parent();
+
+			if ( isBundle.hasClass('bundleNotif') ) {
+				
+				isBundle.toggleClass('flaggedBundle');
+
+			}
 
 		});
 
@@ -299,6 +333,22 @@ Element.prototype.hasClass = function(className) {
 				  });
 
 				}, 2000);
+
+				/*
+				 * Remove Bundle Notification if no
+				 * notifications exist in the bundle
+				 */
+				if ( $(this).parent().parent().parent().children().length == 2 ) {
+
+					setTimeout(function (){
+
+						getRemoveItem.parent().parent().slideUp('slow', function() {
+							$(this).remove();
+						});
+
+					}, 2000);
+
+				}
 
 			}
 

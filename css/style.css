@@ -339,6 +339,7 @@ html, body{
 
 
 .action {
+  height: 88px;
   min-width: 80px;
   display: table-cell;
   vertical-align: middle;
@@ -452,7 +453,10 @@ html, body{
   .remove.action p,
   .add.action p { display: none; }
 
-  .action { padding: 20px 11px; }
+  .action {
+    height: 72px;
+    padding: 20px 11px;
+  }
 
 }
 
