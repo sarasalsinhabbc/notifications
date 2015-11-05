@@ -7,16 +7,20 @@
 
 	$(document).ready(function() {
 
+
+if ($('#lounge').hasClass('loungy')) {
+        getFavourites();
+} else{
+
+}
+
+
 		/*	-----------------------------------------------	* 
 			Open ORB Panel
 		 *	-----------------------------------------------	*/
 		$('#bellIcon').click(function () {
-
 			getFavourites();
-
 			$('#tray').slideToggle('slow');
-			$('#lounge').slideToggle('slow');
-
 		});
 
 		/*	-----------------------------------------------	* 
