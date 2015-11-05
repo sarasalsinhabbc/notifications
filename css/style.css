@@ -421,18 +421,7 @@ html, body{
   margin:0 auto;
 }
 
-.arrow.open {
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -moz-transition: -moz-transform 0.6s;
-  -o-transition: -o-transform 0.6s;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-}
-
-.arrow.close {
+.arrow {
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
@@ -442,6 +431,15 @@ html, body{
   -webkit-transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
 }
+
+.open {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -553,7 +551,7 @@ height: auto;
 
 .stick {
     position: fixed;
-    top: 98px;
+    top: 106px;
     z-index: 10000;
     background-color: white;
     width: 100%;
@@ -570,38 +568,24 @@ height: auto;
 
 #sticky-anchor{
   position: relative;
-  top:60px;
+  top:0px;
+}
+
+#sticky-anchor2{
+  position: relative;
+  top:330px;
 }
 
 #sticky-anchor-stop{
   position: relative;
-  top:360px;
+  top:160px;
 }
 
-
-.open {
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+#sticky-anchor-stop2{
+  position: relative;
+  top:1060px;
 }
 
-.close {
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-.icon-arrow:before {
-    content: " ";
-    background: url('../imgs/arrowLeft.svg');
-    background-size: contain;
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-    margin: 6px;
-}
 
 .childrenNotif {
   max-height: 0;
@@ -735,3 +719,12 @@ height: auto;
 
 }
 
+
+.bundleNotif {
+  position: relative;
+}
+
+.stickit {
+  position: fixed;
+  top: 0;
+}

@@ -123,82 +123,208 @@
 
 
 		/*	-----------------------------------------------	* 
-			Bundle Sticky
+			Bundle Opening & Closing & Sticky 1
 		 *	-----------------------------------------------	*/
 
-		 function sticky_relocate() {
-		 	var window_top = $("#notificationList").scrollTop();
-		 	var div_top = $('#sticky-anchor').offset().top;
-		 	var div_stop = $('#sticky-anchor-stop').offset().top;
+		var bundle1 = $('#bundle1').find('.arrow');
 
-		 	if (window_top > div_top) {
-		 		$('.clonedSticky').addClass('stick');
-		 		$('.clonedSticky').css('display', 'block');
-		 	} else {
-		 		$('.sticky').removeClass('stick');
-		 		$('.clonedSticky').css('display', 'none');
-		 	}
-
-		 	if (window_top > div_stop) {
-		 		$('.clonedSticky').css('display', 'none');
-		 		$('.sticky').removeClass('stick');
-		 		$('.sticky').insertBefore('#lastDiv');
-		 		$('.sticky').addClass('stickStop');
-
-		 	} else {
-		 		$('.sticky').insertBefore('#firstDiv');
-		 	}
-
-		 }
-
-
-		/*	-----------------------------------------------	* 
-			Bundle Opening & Closing
-		 *	-----------------------------------------------	*/
-
-		$('.openBundle').click(function() {
+		bundle1.click(function() {
 			var bundleItems = $(this).parent().parent().siblings('.childrenNotif'),
 			bundleTop = $(this).parent().parent(),
-			arrowRotate = $(this);
+			arrowRotate = $(this),
+			last_div = $(this).parent().parent().siblings('.childrenNotif').find('.lastDiv');
+
+
+				function sticky_relocate() {
+				 	var window_top = $("#notificationList").scrollTop();
+				 	var div_top = $('#sticky-anchor').offset().top;
+				 	var div_stop = $('#sticky-anchor-stop').offset().top;
+
+
+				 	if (window_top > div_top) {
+				 		$('.clonedSticky').addClass('stick');
+				 		$('.clonedSticky').show();
+				 	} else {
+				 		$('.sticky').removeClass('stick');
+				 		$('.clonedSticky').hide();
+				 	}
+
+				 	if (window_top > div_stop) {
+				 		$('.clonedSticky').hide();
+				 		$('.sticky').removeClass('stick');
+				 		$('.sticky').addClass('stickStop');
+				 		$('.sticky').insertBefore(last_div);
+
+				 	} else {
+				 		$('.sticky').insertBefore(bundleItems);
+				 	}
+				 }
+
+				 function closeOtherBundles() {
+				 	$(".childrenNotif").animate({maxHeight : "0px"}, 500, 'easeOutQuart');
+		 			$(".childrenNotif").removeClass('show');
+		 			$(".childrenNotif").find('.singleNotif').removeClass('fadeIn');
+		 			$(".childrenNotif").find('.singleNotif').addClass('fadeOut');
+		 			$(".arrow").removeClass('open');
+		 			$('.bundleNotifTop').removeClass('sticky stick stickStop');
+				    $('#notificationList').off("scroll", sticky_relocate);
+				    $('#sticky-anchor').remove();
+				    $('.clonedSticky').remove();
+				 }
+
 
 		 		if(!bundleItems.hasClass('show')) {
+		 			closeOtherBundles();
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
-		 			bundleItems.addClass('show');
+		 			bundleItems.toggleClass('show');
 		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
 		 			bundleItems.find('.singleNotif').addClass('fadeIn');
-		 			arrowRotate.removeClass('close');
-		 			arrowRotate.addClass('open');
-		 			//bundleTop.addClass('sticky');
-      				//$("<div id='sticky-anchor'/>").insertBefore(bundleTop);
-
-      				//$("#notificationList").scroll(sticky_relocate);
+		 			arrowRotate.toggleClass('open');
+		 			bundleTop.addClass('sticky');
+      				$("<div id='sticky-anchor'/>").insertBefore(bundleTop);
+      				$("#notificationList").scroll(sticky_relocate);
       				//sticky_relocate();
-
-      				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+      				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
 		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
 		 			bundleItems.find('.singleNotif').addClass('fadeOut');
-		 			bundleItems.removeClass('show');
-		 			arrowRotate.removeClass('open');
-		 			arrowRotate.addClass('close');
-		 			//$('.sticky').insertBefore('#firstDiv');
-		 			//bundleTop.removeClass('sticky');
-				    //bundleTop.removeClass('stick');
-
-				   // bundleTop.removeClass('stickStop');
-				    //$("#notificationList").off("scroll", sticky_relocate);
-
-				    //$("#sticky-anchor").remove();
-				    //$('.clonedSticky').remove();
+		 			bundleItems.toggleClass('show');
+		 			arrowRotate.toggleClass('open');
+		 			$('.sticky').insertBefore(bundleItems);
+		 			bundleTop.removeClass('sticky stick stickStop');
+				    $("#notificationList").off("scroll", sticky_relocate);
+				    $("#sticky-anchor").remove();
+				    $('.clonedSticky').remove();
 		 		}
-
 		});
 
-Element.prototype.hasClass = function(className) {
-  return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
-};
+
+
+
+		/*	-----------------------------------------------	* 
+			Bundle Opening & Closing & Sticky 2
+		 *	-----------------------------------------------	*/
+
+		var bundle2 = $('#bundle2').find('.arrow');
+
+		bundle2.click(function() {
+			var bundleItems = $(this).parent().parent().siblings('.childrenNotif'),
+			bundleTop = $(this).parent().parent(),
+			arrowRotate = $(this),
+			last_div = $(this).parent().parent().siblings('.childrenNotif').find('.lastDiv');
+
+
+				function sticky_relocate() {
+				 	var window_top = $("#notificationList").scrollTop();
+				 	var div_top = $('#sticky-anchor2').offset().top;
+				 	var div_stop = $('#sticky-anchor-stop2').offset().top;
+
+
+				 	if (window_top > div_top) {
+				 		$('.clonedSticky').addClass('stick');
+				 		$('.clonedSticky').show();
+				 	} else {
+				 		$('.sticky').removeClass('stick');
+				 		$('.clonedSticky').hide();
+				 	}
+
+				 	if (window_top > div_stop) {
+				 		$('.clonedSticky').hide();
+				 		$('.sticky').removeClass('stick');
+				 		$('.sticky').addClass('stickStop');
+				 		$('.sticky').insertBefore(last_div);
+
+				 	} else {
+				 		$('.sticky').insertBefore(bundleItems);
+				 	}
+				 }
+
+				 function closeOtherBundles() {
+				 	$(".childrenNotif").animate({maxHeight : "0px"}, 500, 'easeOutQuart');
+		 			$(".childrenNotif").removeClass('show');
+		 			$(".childrenNotif").find('.singleNotif').removeClass('fadeIn');
+		 			$(".childrenNotif").find('.singleNotif').addClass('fadeOut');
+		 			$(".arrow").removeClass('open');
+		 			$('.bundleNotifTop').removeClass('sticky stick stickStop');
+				    $('#notificationList').off("scroll", sticky_relocate);
+				    $('#sticky-anchor2').remove();
+				    $('.clonedSticky').remove();
+				 }
+
+
+		 		if(!bundleItems.hasClass('show')) {
+		 			closeOtherBundles();
+		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
+		 			bundleItems.toggleClass('show');
+		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
+		 			bundleItems.find('.singleNotif').addClass('fadeIn');
+		 			arrowRotate.toggleClass('open');
+		 			bundleTop.addClass('sticky');
+      				$("<div id='sticky-anchor2'/>").insertBefore(bundleTop);
+      				$("#notificationList").scroll(sticky_relocate);
+      				//sticky_relocate();
+      				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
+		 		}
+		 		else {
+		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
+		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
+		 			bundleItems.find('.singleNotif').addClass('fadeOut');
+		 			bundleItems.toggleClass('show');
+		 			arrowRotate.toggleClass('open');
+		 			$('.sticky').insertBefore(bundleItems);
+		 			bundleTop.removeClass('sticky stick stickStop');
+				    $("#notificationList").off("scroll", sticky_relocate);
+				    $("#sticky-anchor2").remove();
+				    $('.clonedSticky').remove();
+		 		}
+		});
+
+
+
+
+		/*	-----------------------------------------------	* 
+			Bundle Opening & Closing & Sticky 2
+		 *	-----------------------------------------------	*/
+
+		var bundle3 = $('#bundle3').find('.arrow');
+
+		bundle3.click(function() {
+			var bundleItems = $(this).parent().parent().siblings('.childrenNotif'),
+			bundleTop = $(this).parent().parent(),
+			arrowRotate = $(this),
+			last_div = $(this).parent().parent().siblings('.childrenNotif').find('.lastDiv');
+
+				 function closeOtherBundles() {
+				 	$(".childrenNotif").animate({maxHeight : "0px"}, 500, 'easeOutQuart');
+		 			$(".childrenNotif").removeClass('show');
+		 			$(".childrenNotif").find('.singleNotif').removeClass('fadeIn');
+		 			$(".childrenNotif").find('.singleNotif').addClass('fadeOut');
+		 			$(".arrow").removeClass('open');
+		 			$('.bundleNotifTop').removeClass('sticky stick stickStop');
+				    $('#sticky-anchor2').remove();
+				    $('.clonedSticky').remove();
+				 }
+
+
+		 		if(!bundleItems.hasClass('show')) {
+		 			closeOtherBundles();
+		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
+		 			bundleItems.toggleClass('show');
+		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
+		 			bundleItems.find('.singleNotif').addClass('fadeIn');
+		 			arrowRotate.toggleClass('open');
+		 		}
+		 		else {
+		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
+		 			bundleItems.find('.singleNotif').removeClass('fadeIn');
+		 			bundleItems.find('.singleNotif').addClass('fadeOut');
+		 			bundleItems.toggleClass('show');
+		 			arrowRotate.toggleClass('open');
+		 		}
+		});
+
 
 
 		/*	-----------------------------------------------	* 

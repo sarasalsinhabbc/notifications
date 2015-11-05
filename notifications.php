@@ -41,11 +41,11 @@
 
         </li>
 
-        <li class="bundleNotif">
+        <li id="bundle1" class="bundleNotif">
             <div class="bundleNotifTop animated">
 
                 <ul class="moreActions">
-                    <li class="arrow action openBundle close">
+                    <li class="arrow action openBundle">
                         <img src="imgs/arrowLeft.svg" alt="arrow">
                     </li>
                 </ul>                     
@@ -61,7 +61,7 @@
                 
             </div>
 
-            <ul class="childrenNotif firstDiv">
+            <ul class="childrenNotif">
 
                 <li class="singleNotif animated">
 
@@ -269,12 +269,12 @@
             </div>
         </li>
 
-        <li class="bundleNotif">
+        <li id="bundle2" class="bundleNotif">
 
             <div class="bundleNotifTop animated">
 
                 <ul class="moreActions">
-                    <li class="arrow action openBundle close">
+                    <li class="arrow action openBundle">
                         <img src="imgs/arrowLeft.svg" alt="arrow">
                     </li>
                 </ul>                     
@@ -292,7 +292,7 @@
 
             </div>
 
-            <ul class="childrenNotif firstDiv">
+            <ul class="childrenNotif">
 
                 <li class="singleNotif animated">
 
@@ -535,7 +535,7 @@
 
                 </li>
 
-                <div id="sticky-anchor-stop"></div>
+                <div id="sticky-anchor-stop2"></div>
 
                 <li class="singleNotif animated lastDiv">
 
@@ -599,12 +599,12 @@
             </div>
         </li>
 
-        <li class="bundleNotif">
+        <li id="bundle3" class="bundleNotif">
 
             <div class="bundleNotifTop animated">
 
                 <ul class="moreActions">
-                    <li class="arrow action openBundle close">
+                    <li class="arrow action openBundle">
                         <img src="imgs/arrowLeft.svg" alt="arrow">
                     </li>
                 </ul>                     
@@ -619,7 +619,7 @@
                 </div>
             </div>
 
-            <ul class="childrenNotif firstDiv">
+            <ul class="childrenNotif">
 
                 <li class="singleNotif animated">
 
@@ -746,6 +746,8 @@
             </div>
             
         </li>
+
+
 
     </ul>
 </div>
