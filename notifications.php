@@ -83,7 +83,7 @@
 
                     <div class="textNotif">
                         <img src="imgs/music.svg">
-                        <p class="longPrimer line-clamp">Epidode 09/11/2015</p>
+                        <p class="longPrimer line-clamp">Episode 09/11/2015</p>
                         <p class="notificationMeta brevier">
                             <span class="timeStamp">4 mins ago</span>
                         </p>
@@ -110,7 +110,7 @@
 
                     <div class="textNotif">
                         <img src="imgs/music.svg">
-                        <p class="longPrimer line-clamp">Epidode 06/11/2015</p>
+                        <p class="longPrimer line-clamp">Episode 06/11/2015</p>
                         <p class="notificationMeta brevier">
                             <span class="timeStamp">3 days ago</span>
                         </p>
@@ -137,7 +137,7 @@
 
                     <div class="textNotif">
                         <img src="imgs/music.svg">
-                        <p class="longPrimer line-clamp">Epidode 04/11/2015</p>
+                        <p class="longPrimer line-clamp">Episode 04/11/2015</p>
                         <p class="notificationMeta brevier">
                             <span class="timeStamp">5 days ago</span>
                         </p>
@@ -167,7 +167,7 @@
                     <div class="textNotif">
                         <img src="imgs/music.svg">
 
-                        <p class="longPrimer line-clamp">Epidode 02/11/2015</p>
+                        <p class="longPrimer line-clamp">Episode 02/11/2015</p>
                         <p class="notificationMeta brevier">
                             <span class="timeStamp">1 week ago</span>
                         </p>
@@ -643,7 +643,7 @@
 
                     <div class="textNotif">
                         <img src="imgs/music.svg">
-                        <p class="longPrimer line-clamp">Epidode 2 Season 2</p>
+                        <p class="longPrimer line-clamp">Episode 2 Season 2</p>
                         <p class="notificationMeta brevier">
                             <span class="timeStamp">4 mins ago</span>
                         </p>
@@ -674,7 +674,7 @@
 
                     <div class="textNotif">
                         <img src="imgs/music.svg">
-                        <p class="longPrimer line-clamp">Epidode 1 Season 2</p>
+                        <p class="longPrimer line-clamp">Episode 1 Season 2</p>
                         <p class="notificationMeta brevier">
                             <span class="timeStamp">3 days ago</span>
                         </p>

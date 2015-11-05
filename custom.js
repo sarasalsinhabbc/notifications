@@ -258,7 +258,6 @@
 		 			closeOtherBundles();
 		 			bundleItems.animate({maxHeight : "9999px"}, 1000, 'easeInQuart');
 		 			bundleItems.toggleClass('show');
-		 			bundleItems.addClass('show');
 		 			bundleItems.find('.singleNotif').removeClass('fadeOut');
 		 			bundleItems.find('.singleNotif').addClass('fadeIn');
 		 			arrowRotate.toggleClass('open');
@@ -267,19 +266,6 @@
       				$("#notificationList").scroll(sticky_relocate);
       				//sticky_relocate();
       				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
-      				//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
-
-		 			$('.childrenNotif .singleNotif').removeClass('fadeOut');
-		 			$('.childrenNotif .singleNotif').addClass('fadeIn');
-		 			$('.arrow').removeClass('close');
-		 			$('.arrow').addClass('open');
-//bundleTop.addClass('sticky');
-// $("<div id='sticky-anchor'/>").insertBefore(bundleTop);
-
-// $("#notificationList").scroll(sticky_relocate);
-//sticky_relocate();
-
-//$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
 		 		}
 		 		else {
 		 			bundleItems.animate({maxHeight : "0px"}, 1000, 'easeOutQuart');
@@ -292,31 +278,6 @@
 				    $("#notificationList").off("scroll", sticky_relocate);
 				    $("#sticky-anchor2").remove();
 				    $('.clonedSticky').remove();
-		 			bundleItems.removeClass('show');
-
-		 			arrowRotate.removeClass('open');
-		 			arrowRotate.addClass('close');
-		 			//$('.sticky').insertBefore('#firstDiv');
-		 			//bundleTop.removeClass('sticky');
-				    //bundleTop.removeClass('stick');
-
-				   // bundleTop.removeClass('stickStop');
-				    //$("#notificationList").off("scroll", sticky_relocate);
-
-				    //$("#sticky-anchor").remove();
-				    //$('.clonedSticky').remove();
-
-		 			$('.arrow').removeClass('open');
-		 			$('.arrow').addClass('close');
-//$('.sticky').insertBefore('#firstDiv');
-//bundleTop.removeClass('sticky');
-//bundleTop.removeClass('stick');
-
-//bundleTop.removeClass('stickStop');
-//$("#notificationList").off("scroll", sticky_relocate);
-
-//$("#sticky-anchor").remove();
-//$('.clonedSticky').remove();
 		 		}
 		});
 
