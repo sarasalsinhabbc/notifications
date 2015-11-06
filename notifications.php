@@ -8,14 +8,9 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions threeActions withConfirmation">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
-                </li>
-
-                <li class="flag action">
-                    <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
-                    <p class="longPrimer">Flag</p>
                 </li>
 
                 <li class="add action">
@@ -23,9 +18,24 @@
                     <p class="longPrimer">Add</p>
                 </li>
 
+                <li class="flag action">
+                    <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
+                    <p class="longPrimer">Flag</p>
+                </li>
+
                 <li class="remove action">
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
+                </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
                 </li>
             </ul>
 
@@ -65,9 +75,14 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="download action">
+                            <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Download</p>
                         </li>
 
                         <li class="flag action">
@@ -79,6 +94,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
                     </ul>
 
                     <div class="textNotif">
@@ -92,9 +118,14 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="download action">
+                            <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Download</p>
                         </li>
 
                         <li class="flag action">
@@ -106,6 +137,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
                     </ul>
 
                     <div class="textNotif">
@@ -119,10 +161,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
                         </li>   
+
+                        <li class="download action">
+                            <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Download</p>
+                        </li>
 
                         <li class="flag action">
                             <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
@@ -133,6 +180,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
                     </ul>
 
                     <div class="textNotif">
@@ -148,9 +206,14 @@
 
                 <li class="singleNotif animated lastDiv">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="download action">
+                            <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Download</p>
                         </li>
 
                         <li class="flag action">
@@ -162,6 +225,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
                     </ul>
 
                     <div class="textNotif">
@@ -179,7 +253,7 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions twoActions withConfirmation">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
                 </li>
@@ -193,6 +267,17 @@
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
                 </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
+                </li>
+
             </ul>
 
             <div class="textNotif">
@@ -208,9 +293,14 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions threeActions">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
+                </li>
+
+                <li class="download action">
+                    <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                    <p class="longPrimer">Download</p>
                 </li>
 
                 <li class="flag action">
@@ -222,6 +312,17 @@
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
                 </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
+                </li>
+
             </ul>
 
             <div class="textNotif">
@@ -239,7 +340,7 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions twoActions">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
                 </li>
@@ -253,6 +354,17 @@
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
                 </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
+                </li>
+
             </ul>
 
             <div class="textNotif">
@@ -296,11 +408,16 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
                         </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
+                        </li>                        
 
                         <li class="flag action">
                             <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
@@ -311,6 +428,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -323,10 +451,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -338,6 +471,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -350,10 +494,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -365,6 +514,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -377,10 +537,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -392,6 +557,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -404,10 +580,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -419,6 +600,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -431,10 +623,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -446,6 +643,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -457,10 +665,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -472,6 +685,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -484,10 +708,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -499,6 +728,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -510,10 +750,15 @@
                 </li>
 
                 <li class="singleNotif animated">
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -525,6 +770,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -539,10 +795,15 @@
 
                 <li class="singleNotif animated lastDiv">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="add action">
+                            <img src="imgs/add_white.svg" alt="Add" id="add_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Add</p>
                         </li>
 
                         <li class="flag action">
@@ -554,6 +815,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -570,10 +842,15 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions threeActions">
 
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
+                </li>
+
+                <li class="download action">
+                    <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                    <p class="longPrimer">Download</p>
                 </li>
 
                 <li class="flag action">
@@ -585,6 +862,17 @@
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
                 </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
+                </li>
+
 
             </ul>
 
@@ -623,10 +911,15 @@
 
                 <li class="singleNotif animated">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="download action">
+                            <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Download</p>
                         </li>
 
                         <li class="flag action">
@@ -638,6 +931,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -654,10 +958,15 @@
 
                 <li class="singleNotif animated lastDiv">
 
-                    <ul class="moreActions">
+                    <ul class="moreActions threeActions">
 
                         <li class="more action openActions">
                             <img src="imgs/more.svg" alt="More">
+                        </li>
+
+                        <li class="download action">
+                            <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                            <p class="longPrimer">Download</p>
                         </li>
 
                         <li class="flag action">
@@ -669,6 +978,17 @@
                             <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                             <p class="longPrimer">Remove</p>
                         </li>
+
+                        <li class="remove_confirmation_yes action">
+                            <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                            <p class="longPrimer">Yes</p>
+                        </li>
+
+                        <li class="remove_confirmation_no action">
+                            <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                            <p class="longPrimer">No</p>
+                        </li>
+
 
                     </ul>
 
@@ -688,7 +1008,7 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions twoActions">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
                 </li>
@@ -702,6 +1022,17 @@
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
                 </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
+                </li>
+
             </ul>
 
             <div class="textNotif">
@@ -718,11 +1049,16 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions">
+            <ul class="moreActions threeActions">
                 <li class="more action openActions">
-                <img src="imgs/more.svg" alt="More">
+                    <img src="imgs/more.svg" alt="More">
                 </li>
 
+                <li class="download action">
+                    <img src="imgs/download_white.svg" alt="Download" id="download_action_icon" data-swap="imgs/tick_white.svg">
+                    <p class="longPrimer">Download</p>
+                </li>
+    
                 <li class="flag action">
                     <img id="flag_action_icon" src="imgs/flag_white.svg" alt="Flag" data-swap="imgs/flagged_white.svg">
                     <p class="longPrimer">Flag</p>
@@ -732,6 +1068,17 @@
                     <img id="remove_action_icon" src="imgs/remove_white.svg" alt="Remove" data-swap="imgs/loading_white.svg">
                     <p class="longPrimer">Remove</p>
                 </li>
+
+                <li class="remove_confirmation_yes action">
+                    <img src="imgs/tick_white.svg" alt="Remove Yes" id="remove_confirmation_yes_icon">
+                    <p class="longPrimer">Yes</p>
+                </li>
+
+                <li class="remove_confirmation_no action">
+                    <img src="imgs/remove_white.svg" alt="Remove No" id="remove_confirmation_no_icon">
+                    <p class="longPrimer">No</p>
+                </li>
+
             </ul>
 
             <div class="textNotif">
