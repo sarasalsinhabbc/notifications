@@ -8,12 +8,11 @@
 	$(document).ready(function() {
 
 
-if ($('#lounge').hasClass('loungy')) {
-        getFavourites();
-} else{
+		if ( $('#lounge').hasClass('loungy') ) {
+			getFavourites();
+		} else {
 
-}
-
+		}
 
 		/*	-----------------------------------------------	* 
 			Open ORB Panel
@@ -417,24 +416,36 @@ if ($('#lounge').hasClass('loungy')) {
 
 				var getRemoveItem = $(this).parent().parent();
 
-				var getRemoveLabel = $(this).find('.longPrimer');
-				getRemoveLabel.replaceWith('<p class="longPrimer">Removing</p>');
+				if ( $(this).parent().hasClass('withConfirmation') ) {
 
-				var remove_icon_action = $(this).children('#remove_action_icon');
-				var remove_icon_action_source = remove_icon_action.attr('src');
-				var swap = remove_icon_action.attr("data-swap");
+					$('.moreActionsOpened.withConfirmation').toggleClass('remove_no_action');
 
-				remove_icon_action.attr('src', swap).attr("data-swap", remove_icon_action_source);
+				} else {
 
-				remove_icon_action.toggleClass('loadingSpinner');
+					var getRemoveLabel = $(this).find('.longPrimer');
+					getRemoveLabel.replaceWith('<p class="longPrimer">Removing</p>');
 
-				setTimeout(function (){
+					var remove_icon_action = $(this).children('#remove_action_icon');
+					var remove_icon_action_source = remove_icon_action.attr('src');
+					var swap = remove_icon_action.attr("data-swap");
 
-				  getRemoveItem.slideUp('slow', function() {
-				  	$(this).remove();
-				  });
+					remove_icon_action.attr('src', swap).attr("data-swap", remove_icon_action_source);
 
-				}, 2000);
+					remove_icon_action.toggleClass('loadingSpinner');
+
+				}
+
+				if ( !$(this).parent().hasClass('withConfirmation') ) {
+
+					setTimeout(function (){
+
+					  getRemoveItem.slideUp('slow', function() {
+					  	$(this).remove();
+					  });
+
+					}, 2000);
+
+				}
 
 				/*
 				 * Remove Bundle Notification if no
@@ -451,6 +462,49 @@ if ($('#lounge').hasClass('loungy')) {
 					}, 2000);
 
 				}
+
+			}
+
+		});
+
+		$('.remove_confirmation_yes').click(function() {
+
+			if( $(this).parent().parent().hasClass('singleNotif') ) {
+
+				if ( $(this).parent().hasClass('withConfirmation') ) {
+
+					var getRemoveItem = $(this).parent().parent();
+
+					var getRemoveLabel = $(this).siblings('.remove').find('.longPrimer');
+					getRemoveLabel.replaceWith('<p class="longPrimer">Removing</p>');
+
+					var remove_icon_action = $(this).siblings('.remove').children('#remove_action_icon');
+					var remove_icon_action_source = remove_icon_action.attr('src');
+					var swap = remove_icon_action.attr("data-swap");
+
+					remove_icon_action.attr('src', swap).attr("data-swap", remove_icon_action_source);
+
+					remove_icon_action.toggleClass('loadingSpinner');
+
+					setTimeout(function (){
+
+					  getRemoveItem.slideUp('slow', function() {
+					  	$(this).remove();
+					  });
+
+					}, 2000);
+
+				}
+
+			}
+
+		});
+
+		$('.remove_confirmation_no').click(function() {
+
+			if ( $(this).parent().hasClass('withConfirmation') ) {
+
+				$('.moreActionsOpened.withConfirmation').toggleClass('remove_no_action');
 
 			}
 
