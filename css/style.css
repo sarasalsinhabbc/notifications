@@ -129,10 +129,6 @@ html, body{
   overflow: auto;
 }
 
-#notificationList ul{
-  height: 100%;
-}
-
 #notificationList::-webkit-scrollbar { 
     display: none; 
 }
@@ -284,7 +280,6 @@ html, body{
 .moreActions {
   display: table;
   float:right;
-  margin-right: -160px;
   position: relative;
   right: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -292,6 +287,102 @@ html, body{
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.moreActions.threeActions.withConfirmation {
+  margin-right: -400px;
+}
+
+.moreActions.twoActions.withConfirmation {
+  margin-right: -320px;
+}
+
+.moreActions.threeActions {
+  margin-right: -406px;
+}
+
+.moreActions.twoActions {
+  margin-right: -320px;
+}
+
+.moreActions.threeActions.withConfirmation.moreActionsOpened,
+.moreActions.twoActions.withConfirmation.moreActionsOpened,
+.moreActions.threeActions.moreActionsOpened,
+.moreActions.twoActions.moreActionsOpened {
+  right: 0;
+  margin-right: -160px;
+}
+
+.moreActions.threeActions.moreActionsOpened.withConfirmation.remove_no_action,
+.moreActions.twoActions.moreActionsOpened.withConfirmation.remove_no_action {
+  right: 0;
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .moreActions.threeActions.withConfirmation {
+    margin-right: -274px;
+  }
+
+  .moreActions.twoActions.withConfirmation {
+    margin-right: -220px;
+  }
+
+  .moreActions.threeActions {
+    margin-right: -274px;
+  }
+
+  .moreActions.twoActions {
+    margin-right: -220px;
+  }  
+
+  .moreActionsOpened.moreActions.threeActions.withConfirmation {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .moreActionsOpened.moreActions.twoActions.withConfirmation {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .moreActionsOpened.moreActions.threeActions {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .moreActionsOpened.moreActions.twoActions {
+    right: 0;
+    margin-right: -110px;
+  }
+
+}
+
+@media only screen and (max-width: 420px) {
+
+  .moreActionsOpened.moreActions.threeActions.withConfirmation {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .moreActionsOpened.moreActions.twoActions.withConfirmation {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .moreActionsOpened.moreActions.threeActions {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .moreActionsOpened.moreActions.twoActions {
+    right: 0;
+    margin-right: -110px;
+  }
+
+  .remove_no_action + .textNotif img,
+  .remove_no_action + .textNotif p { display: none !important; }
 }
 
 .bundleNotifTop .moreActions {
@@ -307,44 +398,6 @@ html, body{
   transition: all 0.5s ease-in-out;
 }
 
-
-@media only screen and (max-width: 600px) {
-
-  .moreActions {
-    margin-right: -160px;
-  }
-
-
-}
-
-@media only screen and (max-width: 420px) {
-
-  .moreActionsOpenedMobile {
-    margin-left: -109px;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .moreActionsOpenedMobile .moreActions {
-    margin-right: -109px;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  } 
-
-}
-
-.moreActionsOpened {
-  right: 0;
-  margin-right: 0;
-}
-
-
 .action {
   height: 88px;
   min-width: 80px;
@@ -359,7 +412,8 @@ html, body{
   box-sizing:        border-box;
 }
 
-.more.action {
+.more.action,
+.arrow.action {
   min-width: 50px;
 }
 
@@ -369,13 +423,20 @@ html, body{
 
 .flag,
 .remove,
-.add {
+.add,
+.download,
+.remove_confirmation_yes,
+.remove_confirmation_no {
   background-color: #007bc7;
   border-right: 1px solid #ffffff;
 }
 
 .flag:hover,
-.remove:hover {
+.remove:hover,
+.add:hover,
+.download:hover,
+.remove_confirmation_yes:hover,
+.remove_confirmation_no:hover {
   background-color: #006cae;
 }
 
@@ -410,7 +471,10 @@ html, body{
 
 .flag .longPrimer,
 .remove .longPrimer,
-.add .longPrimer {
+.add .longPrimer,
+.download .longPrimer,
+.remove_confirmation_yes .longPrimer,
+.remove_confirmation_no .longPrimer {
   display: block;
   padding-top: 0;
 }
@@ -421,7 +485,10 @@ html, body{
 .more img,
 .flag img,
 .remove img,
-.add img {
+.add img,
+.download img,
+.remove_confirmation_yes img,
+.remove_confirmation_no img {
   width:32px;
   height:32px;
   display: block;
@@ -456,7 +523,10 @@ html, body{
 
   .flag.action p,
   .remove.action p,
-  .add.action p { display: none; }
+  .add.action p,
+  .download.action p,
+  .remove_confirmation_yes p,
+  .remove_confirmation_no p { display: none !important; }
 
   .action {
     height: 72px;
