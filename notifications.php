@@ -8,7 +8,7 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions threeActionsx">
+            <ul class="moreActions threeActions">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
                 </li>
