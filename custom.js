@@ -285,8 +285,6 @@
 		});
 
 
-
-
 		/*	-----------------------------------------------	* 
 			Bundle Opening & Closing & Sticky 2
 		 *	-----------------------------------------------	*/
@@ -556,7 +554,7 @@
 		$('#includeOrb').load('orb/orb.html');
 
 // ONLY TEMP
-$('#initial').hide();
+//$('#initial').hide();
 
 		//sticky_relocate();
 
