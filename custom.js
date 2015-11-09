@@ -171,7 +171,6 @@
 		 			$(".arrow").removeClass('open');
 		 			$('.bundleNotifTop').removeClass('sticky stick stickStop');
 				    $('#notificationList').off("scroll", sticky_relocate);
-				    $('#sticky-anchor').remove();
 				    $('.clonedSticky').remove();
 				 }
 
@@ -198,7 +197,6 @@
 		 			$('.sticky').insertBefore(bundleItems);
 		 			bundleTop.removeClass('sticky stick stickStop');
 				    $("#notificationList").off("scroll", sticky_relocate);
-				    $("#sticky-anchor").remove();
 				    $('.clonedSticky').remove();
 		 		}
 		});
@@ -219,7 +217,7 @@
 			last_div = $(this).parent().parent().siblings('.childrenNotif').find('.lastDiv');
 
 
-				function sticky_relocate() {
+				function sticky_relocate2() {
 				 	var window_top = $("#notificationList").scrollTop();
 				 	var div_top = $('#sticky-anchor2').offset().top;
 				 	var div_stop = $('#sticky-anchor-stop2').offset().top;
@@ -251,8 +249,7 @@
 		 			$(".childrenNotif").find('.singleNotif').addClass('fadeOut');
 		 			$(".arrow").removeClass('open');
 		 			$('.bundleNotifTop').removeClass('sticky stick stickStop');
-				    $('#notificationList').off("scroll", sticky_relocate);
-				    $('#sticky-anchor2').remove();
+				    $('#notificationList').off("scroll", sticky_relocate2);
 				    $('.clonedSticky').remove();
 				 }
 
@@ -266,7 +263,7 @@
 		 			arrowRotate.toggleClass('open');
 		 			bundleTop.addClass('sticky');
       				$("<div id='sticky-anchor2'/>").insertBefore(bundleTop);
-      				$("#notificationList").scroll(sticky_relocate);
+      				$("#notificationList").scroll(sticky_relocate2);
       				//sticky_relocate();
       				$('.sticky').clone().addClass('clonedSticky').prependTo( "#notificationList" );
 		 		}
@@ -278,8 +275,7 @@
 		 			arrowRotate.toggleClass('open');
 		 			$('.sticky').insertBefore(bundleItems);
 		 			bundleTop.removeClass('sticky stick stickStop');
-				    $("#notificationList").off("scroll", sticky_relocate);
-				    $("#sticky-anchor2").remove();
+				    $("#notificationList").off("scroll", sticky_relocate2);
 				    $('.clonedSticky').remove();
 		 		}
 		});

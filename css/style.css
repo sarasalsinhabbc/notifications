@@ -645,6 +645,7 @@ height: auto;
 
 .clonedSticky{
   display:none;
+  max-width: 1008px;
 }
 
 #sticky-anchor{
