@@ -8,7 +8,7 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions threeActions withConfirmation">
+            <ul class="moreActions threeActionsx">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
                 </li>
@@ -253,7 +253,7 @@
 
         <li class="singleNotif animated">
 
-            <ul class="moreActions twoActions withConfirmation">
+            <ul class="moreActions twoActions">
                 <li class="more action openActions">
                     <img src="imgs/more.svg" alt="More">
                 </li>
@@ -1095,7 +1095,7 @@
         </li>
 
         <li class="singleNotif animated">
-            <a href="lounge.php" class="loungeButton longPrimer">Go to Lounge</a>
+            <a href="lounge.php" class="loungeButton longPrimer">View All Notifications</a>
         </li>
 
     </ul>
